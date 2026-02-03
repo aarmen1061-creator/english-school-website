@@ -280,7 +280,7 @@ export default async function PricingPage({
             </Button>
             <Button asChild size="lg" variant="outline">
               <Link href={`/${params.lang}/programs`}>
-                {t.cta.viewPrograms}
+                {t.cta.viewPricing}
               </Link>
             </Button>
           </div>
