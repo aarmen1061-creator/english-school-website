@@ -1,15 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { i18n } from './lib/i18n/settings'
+
+const locales = ['ru', 'en']
+const defaultLocale = 'ru'
 
 function getLocale(request: NextRequest): string {
   const acceptLanguage = request.headers.get('accept-language')
   if (acceptLanguage) {
     const preferred = acceptLanguage.split(',')[0].split('-')[0].toLowerCase()
-    if (i18n.locales.includes(preferred as any)) {
+    if (locales.includes(preferred)) {
       return preferred
     }
   }
-  return i18n.defaultLocale
+  return defaultLocale
 }
 
 export function middleware(request: NextRequest) {
@@ -26,7 +28,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Check if pathname has a supported locale
-  const pathnameHasLocale = i18n.locales.some(
+  const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
 
