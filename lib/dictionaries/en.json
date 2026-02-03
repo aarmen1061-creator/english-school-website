@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "title": "EwE School — Language Courses for Children in New Moscow",
+    "description": "Teaching children aged 3 to 17 English and other languages. 8 branches in New Moscow. Sign up for a free trial lesson!"
+  },
+  "nav": {
+    "courses": "Courses",
+    "branches": "Branches",
+    "schedule": "Schedule",
+    "reviews": "Reviews",
+    "about": "About",
+    "contacts": "Contacts",
+    "trialLesson": "Trial Lesson",
+    "enroll": "Enroll"
+  },
+  "hero": {
+    "network": "Foreign Language School Network",
+    "title": "English for Kids",
+    "subtitle": "Your child will speak English in 3 months",
+    "tagline": "Learning only with native speakers",
+    "freeLesson": "First lesson is free",
+    "description": "Teaching children aged 3 to 17 English through games and engagement. 8 branches in New Moscow, experienced teachers, results in just 3 months.",
+    "ctaEnroll": "Sign Up for a Trial Lesson",
+    "ctaBranches": "Choose a Branch"
+  },
+  "features": {
+    "teachers": {
+      "title": "Experienced Teachers",
+      "description": "With international certificates"
+    },
+    "approach": {
+      "title": "Game-Based Learning",
+      "description": "Learning through games and fun"
+    },
+    "branches": {
+      "title": "8 Branches",
+      "description": "In New Moscow — choose the nearest one"
+    }
+  },
+  "courses": {
+    "title": "Our Courses",
+    "subtitle": "Programs for every age",
+    "preschool": {
+      "title": "Preschoolers",
+      "age": "3–6 years",
+      "description": "Introduction to English through games, songs and creativity. Building interest in language from an early age."
+    },
+    "school": {
+      "title": "School Children",
+      "age": "7–12 years",
+      "description": "Developing all language skills: reading, writing, speaking and listening. Helping with school curriculum."
+    },
+    "teens": {
+      "title": "Teenagers",
+      "age": "13–17 years",
+      "description": "Exam preparation, conversational English, international exams. Relevant topics and modern methods."
+    },
+    "learnMore": "Learn More",
+    "enrollNow": "Enroll Now"
+  },
+  "branches": {
+    "title": "Our Branches",
+    "subtitle": "8 branches in New Moscow",
+    "viewOnMap": "View on Map",
+    "details": "Details",
+    "schedule": "Schedule",
+    "phone": "Phone",
+    "address": "Address"
+  },
+  "schedule": {
+    "title": "Class Schedule",
+    "subtitle": "Choose a branch and age group",
+    "filterBranch": "Branch",
+    "filterAge": "Age",
+    "allBranches": "All branches",
+    "allAges": "All ages",
+    "days": {
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday",
+      "sun": "Sunday"
+    }
+  },
+  "reviews": {
+    "title": "Parent Reviews",
+    "subtitle": "What they say about us"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "EwE School — language courses network for children"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "Get in touch with us",
+    "workingHours": "Working Hours",
+    "weekdays": "Mon–Fri: 9:00–20:00",
+    "weekends": "Sat–Sun: 10:00–18:00"
+  },
+  "enroll": {
+    "title": "Course Enrollment",
+    "subtitle": "Fill out the form and we will contact you",
+    "parentName": "Parent Name",
+    "parentPhone": "Phone",
+    "parentEmail": "Email",
+    "childName": "Child's Name",
+    "childAge": "Child's Age",
+    "selectBranch": "Select Branch",
+    "selectCourse": "Select Course",
+    "message": "Comment",
+    "submit": "Submit Application",
+    "success": "Application sent! We will contact you shortly.",
+    "error": "An error occurred. Please try again."
+  },
+  "footer": {
+    "description": "Teaching children aged 3 to 17 foreign languages. 8 branches in New Moscow.",
+    "navigation": "Navigation",
+    "info": "Information",
+    "contactsTitle": "Contacts",
+    "rights": "All rights reserved."
+  },
+  "gallery": {
+    "title": "Our School",
+    "subtitle": "Lessons, celebrations and the EwE School atmosphere"
+  },
+  "ambassador": {
+    "navTitle": "Ambassador",
+    "title": "EwE School Ambassador",
+    "subtitle": "Bring friends — get rewarded",
+    "homeTitle": "Become an EwE School Ambassador",
+    "homeDescription": "Bring new students and get a discount on tuition or cash back. Tell your friends about us — we say thank you!",
+    "homeButton": "Learn More",
+    "howItWorks": "How It Works",
+    "step1Title": "Tell Your Friends",
+    "step1Description": "Share information about EwE School with friends, acquaintances and neighbors. Tell them about your experience at our school.",
+    "step2Title": "Friend Enrolls",
+    "step2Description": "Your friend brings their child for a trial lesson and enrolls in a course, mentioning you as the referrer.",
+    "step3Title": "You Get Rewarded",
+    "step3Description": "Choose your preferred reward: a discount on your child's tuition or cash back.",
+    "option1Title": "Tuition Discount",
+    "option1Description": "Get a discount on your child's tuition for every new student you bring. Discounts stack up!",
+    "option1Feature1": "Discount for each new student",
+    "option1Feature2": "Discounts accumulate",
+    "option1Feature3": "Applies to any course",
+    "option2Title": "Group Cashback",
+    "option2Description": "Gather a group of new students and receive a cash reward. The bigger the group — the bigger the cashback!",
+    "option2Feature1": "Cash reward",
+    "option2Feature2": "Bonus for each student in the group",
+    "option2Feature3": "Payment after enrollment starts",
+    "chooseReward": "Choose Your Reward",
+    "ctaTitle": "Want to Become an Ambassador?",
+    "ctaDescription": "Leave a request and we'll share all the program details",
+    "ctaButton": "Submit Request"
+  },
+  "promo": {
+    "title": "Bring a Friend — Get a Discount",
+    "subtitle": "Tell your friends about EwE School and both of you get a discount on tuition",
+    "bannerText": "Bring a friend and study together with a discount!",
+    "bannerButton": "Learn More",
+    "description": "We value your trust! If you enjoy learning at EwE School — tell your friends about it. For every new student who comes through your recommendation, both you and your friend will receive a discount on tuition.",
+    "howItWorks": "How It Works",
+    "step1Title": "Tell Your Friend",
+    "step1Desc": "Share your experience at EwE School with friends and acquaintances. Tell them why your child loves learning with us.",
+    "step2Title": "Friend Enrolls",
+    "step2Desc": "Your friend brings their child for a trial lesson and enrolls in a course, mentioning you as the referrer.",
+    "step3Title": "Both Get a Discount",
+    "step3Desc": "Both you and your friend receive a discount on tuition. The more friends you bring — the bigger the savings!",
+    "conditionsTitle": "Promotion Terms",
+    "condition1": "This promotion is ongoing with no end date",
+    "condition2": "Discount is applied after the new student pays for the first month",
+    "condition3": "The referrer must be a current EwE School student",
+    "condition4": "The new student must mention the referrer upon enrollment",
+    "condition5": "Discounts stack for each friend you bring",
+    "ctaTitle": "Want to Get a Discount?",
+    "ctaDesc": "Sign up your friend for a trial lesson right now!",
+    "ctaButton": "Enroll",
+    "navTitle": "Promos"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "back": "Back",
+    "loading": "Loading...",
+    "close": "Close"
+  },
+  "kindergarten": {
+    "meta": {
+      "title": "MiniDomini — Private Kindergarten in Moscow for Children 1.5 to 7 Years",
+      "description": "Private kindergarten with comprehensive development, English language, and school preparation. Small groups, experienced teachers, individual approach."
+    },
+    "nav": {
+      "programs": "Programs",
+      "pricing": "Pricing",
+      "teachers": "Teachers",
+      "schedule": "Daily Schedule",
+      "gallery": "Gallery",
+      "reviews": "Reviews",
+      "about": "About",
+      "contacts": "Contacts",
+      "bookTour": "Book a Tour"
+    },
+    "hero": {
+      "title": "Private Kindergarten",
+      "subtitle": "for children aged 1.5 to 7 years",
+      "description": "Gentle development, comprehensive programs, English language, school preparation. Creating an atmosphere where every child unlocks their potential.",
+      "ctaBookTour": "Book a Tour",
+      "ctaViewPrograms": "Our Programs",
+      "urgencyBanner": "Only {count} spots left for September!"
+    },
+    "programs": {
+      "title": "Our Programs",
+      "subtitle": "Age groups for harmonious development",
+      "toddlers": "Toddlers",
+      "preschool": "Preschool",
+      "preK": "Pre-K",
+      "ageRange": "{min}–{max} years",
+      "viewDetails": "Learn More",
+      "enrollNow": "Enroll Now"
+    },
+    "pricing": {
+      "title": "Tuition",
+      "subtitle": "Transparent pricing with no hidden fees",
+      "perMonth": "per month",
+      "registrationFee": "Registration fee",
+      "popular": "Popular",
+      "whatIncluded": "What's included",
+      "enrollNow": "Enroll Now",
+      "additionalServices": "Additional Services",
+      "discounts": "Discounts & Promotions"
+    },
+    "teachers": {
+      "title": "Our Teachers",
+      "subtitle": "Professionals with international certifications",
+      "yearsExperience": "{count} years of experience",
+      "viewProfile": "View Profile",
+      "certifications": "Certifications",
+      "specialties": "Specialization",
+      "education": "Education"
+    },
+    "dailySchedule": {
+      "title": "Daily Schedule",
+      "subtitle": "Balanced routine for harmonious development",
+      "meal": "Meal",
+      "education": "Education",
+      "activity": "Activity",
+      "rest": "Rest",
+      "outdoor": "Outdoor",
+      "freePlay": "Free Play"
+    },
+    "menu": {
+      "title": "Meal Menu",
+      "subtitle": "Balanced 5-meal nutrition",
+      "breakfast": "Breakfast",
+      "snack1": "Morning Snack",
+      "lunch": "Lunch",
+      "snack2": "Afternoon Snack",
+      "dinner": "Dinner",
+      "allergenInfo": "Allergen Information"
+    },
+    "cta": {
+      "bookSeptember": "Reserve spot for September",
+      "freeTrial": "Sign up for free trial day",
+      "limitedSpots": "Act now — only {count} spots left",
+      "earlyBird": "Get early bird discount",
+      "scheduleVisit": "Schedule a tour",
+      "downloadGuide": "Download Free",
+      "takeQuiz": "Take Quiz",
+      "viewPricing": "View Pricing",
+      "bookNow": "Book Now",
+      "callNow": "Call Now",
+      "chatWhatsapp": "Chat on WhatsApp"
+    },
+    "urgency": {
+      "spotsLeft": "{count} spots left",
+      "oneSpotLeft": "Only 1 spot left!",
+      "limitedAvailability": "Limited availability",
+      "waitlist": "Join waitlist",
+      "earlyBirdExpires": "Discount expires in {days} days",
+      "enrollSoon": "Enroll today"
+    },
+    "testimonials": {
+      "title": "Parent Testimonials",
+      "subtitle": "What our families say",
+      "videoTitle": "Video Testimonials",
+      "readMore": "Read more",
+      "attending": "Attending for {duration}",
+      "verified": "Verified Review"
+    },
+    "comparison": {
+      "title": "Why MiniDomini?",
+      "subtitle": "Comparison with regular kindergarten",
+      "ourKindergarten": "MiniDomini",
+      "regularKindergarten": "Regular Kindergarten",
+      "feature": "Feature"
+    },
+    "enrollment": {
+      "title": "How to Enroll",
+      "subtitle": "4 simple steps to start",
+      "step1": "Inquiry",
+      "step1Desc": "Fill form or call us",
+      "step2": "Tour",
+      "step2Desc": "Meet our facility and teachers",
+      "step3": "Consultation",
+      "step3Desc": "Discuss program and answer questions",
+      "step4": "Documents",
+      "step4Desc": "Prepare and sign agreement",
+      "step5": "Adaptation",
+      "step5Desc": "Gentle adjustment to new environment"
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Answers to common questions",
+      "searchPlaceholder": "Search questions...",
+      "categories": {
+        "enrollment": "Enrollment",
+        "program": "Program",
+        "dailyLife": "Daily Life",
+        "healthSafety": "Health & Safety",
+        "payments": "Payments"
+      }
+    },
+    "bookTour": {
+      "title": "Book a Tour",
+      "subtitle": "Come visit our kindergarten",
+      "parentName": "Parent Name",
+      "parentPhone": "Phone",
+      "parentEmail": "Email",
+      "childName": "Child Name",
+      "childAge": "Child Age",
+      "selectDate": "Select Date",
+      "selectTime": "Select Time",
+      "selectProgram": "Program of Interest",
+      "message": "Message",
+      "submit": "Book Tour",
+      "success": "Tour booked! We sent confirmation to your email.",
+      "error": "An error occurred. Please try again."
+    },
+    "quiz": {
+      "title": "Is Your Child Ready for Kindergarten?",
+      "subtitle": "Take the quiz and get personalized recommendations",
+      "startQuiz": "Start Quiz",
+      "nextQuestion": "Next",
+      "previousQuestion": "Back",
+      "submitQuiz": "Get Results",
+      "progress": "Question {current} of {total}"
+    },
+    "leadMagnet": {
+      "title": "Free Resources",
+      "downloadGuide": "Download Guide",
+      "enterEmail": "Enter email to receive",
+      "emailPlaceholder": "your@email.com",
+      "namePlaceholder": "Your Name",
+      "downloadButton": "Get Free",
+      "success": "Check your email — we sent you the file!",
+      "guide1Title": "How to Choose a Kindergarten: 12 Criteria",
+      "guide1Description": "Checklist for parents to choose the perfect kindergarten"
+    },
+    "availability": {
+      "available": "Available",
+      "limitedAvailability": "Limited availability",
+      "spotsLeft": "{count} spots left",
+      "oneSpotLeft": "Only 1 spot left!",
+      "waitlist": "Join waitlist",
+      "nextIntake": "Next intake: {date}"
+    },
+    "newsletter": {
+      "title": "Useful Materials for Parents",
+      "subtitle": "Tips on parenting, development and education",
+      "emailPlaceholder": "Your email",
+      "subscribe": "Subscribe",
+      "success": "Thanks for subscribing!",
+      "privacyNote": "No spam. Unsubscribe anytime."
+    }
+  }
+}

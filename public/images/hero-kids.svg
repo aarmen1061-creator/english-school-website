@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <!-- Speech bubble -->
+  <path d="M260 30 Q260 10 290 10 L430 10 Q460 10 460 30 L460 80 Q460 100 430 100 L330 100 L310 120 L320 100 L290 100 Q260 100 260 80 Z" fill="white" stroke="#2D3748" stroke-width="2"/>
+  <text x="360" y="45" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="16" font-weight="bold" fill="#2D3748">learning</text>
+  <text x="360" y="68" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="16" font-weight="bold" fill="#2D3748">must be fun!</text>
+
+  <!-- Boy jumping -->
+  <!-- Head -->
+  <circle cx="230" cy="145" r="32" fill="#FDDCB5"/>
+  <!-- Hair -->
+  <path d="M198 140 Q200 105 230 105 Q260 105 262 140 Q260 120 245 118 Q230 116 215 118 Q200 120 198 140Z" fill="#B5542A"/>
+  <!-- Fringe -->
+  <path d="M210 130 Q215 112 230 110 Q240 112 245 118 L240 128 Q230 120 220 125 Z" fill="#C4622E"/>
+  <!-- Eyes -->
+  <circle cx="218" cy="142" r="4" fill="#2D3748"/>
+  <circle cx="242" cy="142" r="4" fill="#2D3748"/>
+  <!-- Eye highlights -->
+  <circle cx="220" cy="140" r="1.5" fill="white"/>
+  <circle cx="244" cy="140" r="1.5" fill="white"/>
+  <!-- Mouth (smile) -->
+  <path d="M222 155 Q230 165 238 155" stroke="#2D3748" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="210" cy="152" r="5" fill="#FFB8B8" opacity="0.5"/>
+  <circle cx="250" cy="152" r="5" fill="#FFB8B8" opacity="0.5"/>
+
+  <!-- Boy body - purple shirt -->
+  <path d="M210 175 Q215 170 230 170 Q245 170 250 175 L260 220 Q245 225 230 225 Q215 225 200 220 Z" fill="#7C3AED"/>
+  <!-- Arms raised -->
+  <path d="M200 185 L170 155 L175 148" stroke="#FDDCB5" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M260 185 L290 155 L285 148" stroke="#FDDCB5" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <!-- Hands -->
+  <circle cx="175" cy="146" r="8" fill="#FDDCB5"/>
+  <circle cx="285" cy="146" r="8" fill="#FDDCB5"/>
+
+  <!-- Boy shorts -->
+  <path d="M205 220 L200 260 L220 260 L230 235 L240 260 L260 260 L255 220 Z" fill="#4A5568"/>
+
+  <!-- Boy legs -->
+  <path d="M210 260 L205 300" stroke="#FDDCB5" stroke-width="8" stroke-linecap="round"/>
+  <path d="M250 260 L255 300" stroke="#FDDCB5" stroke-width="8" stroke-linecap="round"/>
+  <!-- Shoes -->
+  <ellipse cx="202" cy="304" rx="12" ry="6" fill="#E53E3E"/>
+  <ellipse cx="258" cy="304" rx="12" ry="6" fill="#E53E3E"/>
+
+  <!-- Girl reading -->
+  <!-- Body - sitting/lying -->
+  <path d="M370 250 Q380 240 400 235 Q420 230 430 240 L435 280 Q420 290 400 290 Q380 290 365 280 Z" fill="#EC4899"/>
+
+  <!-- Girl head -->
+  <circle cx="400" cy="210" r="28" fill="#FDDCB5"/>
+  <!-- Hair (long, orange) -->
+  <path d="M372 210 Q370 175 400 172 Q430 175 428 210 Q425 190 415 188 Q400 186 385 188 Q375 190 372 210Z" fill="#ED8936"/>
+  <!-- Long hair sides -->
+  <path d="M372 210 Q368 230 370 260 Q374 250 378 240 Z" fill="#ED8936"/>
+  <path d="M428 210 Q432 230 430 260 Q426 250 422 240 Z" fill="#ED8936"/>
+  <!-- Ponytail -->
+  <path d="M415 178 Q430 165 440 170 Q445 175 438 180" fill="#ED8936"/>
+  <!-- Hair tie -->
+  <circle cx="435" cy="172" r="4" fill="#E53E3E"/>
+
+  <!-- Girl eyes -->
+  <circle cx="390" cy="207" r="3.5" fill="#2D3748"/>
+  <circle cx="410" cy="207" r="3.5" fill="#2D3748"/>
+  <circle cx="391.5" cy="205.5" r="1.2" fill="white"/>
+  <circle cx="411.5" cy="205.5" r="1.2" fill="white"/>
+  <!-- Mouth -->
+  <path d="M394 220 Q400 226 406 220" stroke="#2D3748" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="382" cy="215" r="4" fill="#FFB8B8" opacity="0.5"/>
+  <circle cx="418" cy="215" r="4" fill="#FFB8B8" opacity="0.5"/>
+
+  <!-- Girl legs -->
+  <path d="M380 285 Q370 310 365 330 Q363 340 370 340" stroke="#FDDCB5" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M410 285 Q420 310 430 320 Q435 325 440 320" stroke="#FDDCB5" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <!-- Shoes -->
+  <ellipse cx="370" cy="342" rx="10" ry="5" fill="#E53E3E"/>
+  <!-- Foot up -->
+  <path d="M438 318 L448 312" stroke="#E53E3E" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Book (open, on ground) -->
+  <path d="M340 330 L380 310 L420 310 L460 330 L420 325 L380 325 Z" fill="white" stroke="#CBD5E0" stroke-width="1"/>
+  <path d="M380 310 L380 325" stroke="#CBD5E0" stroke-width="1"/>
+  <!-- Book lines -->
+  <line x1="350" y1="325" x2="375" y2="318" stroke="#CBD5E0" stroke-width="1"/>
+  <line x1="352" y1="328" x2="377" y2="321" stroke="#CBD5E0" stroke-width="1"/>
+  <line x1="385" y1="318" x2="410" y2="318" stroke="#CBD5E0" stroke-width="1"/>
+  <line x1="385" y1="321" x2="410" y2="321" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Desk lamp / small book stack -->
+  <rect x="440" cy="310" y="300" width="25" height="35" rx="3" fill="#4299E1"/>
+  <rect x="443" y="303" width="19" height="5" rx="1" fill="#63B3ED"/>
+  <rect x="438" y="335" width="30" height="8" rx="2" fill="#2B6CB0"/>
+  <rect x="435" y="330" width="36" height="8" rx="2" fill="#E53E3E"/>
+
+  <!-- Stars/sparkles -->
+  <text x="170" y="130" font-size="16" fill="#F6E05E">✦</text>
+  <text x="300" y="130" font-size="12" fill="#F6E05E">✦</text>
+  <text x="460" y="200" font-size="14" fill="#F6E05E">✦</text>
+  <text x="150" y="200" font-size="10" fill="#F6E05E">✦</text>
+</svg>
