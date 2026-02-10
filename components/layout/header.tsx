@@ -20,14 +20,13 @@ export function Header({ lang, dict }: HeaderProps) {
   const switchedPath = pathname.replace(`/${lang}`, `/${otherLang}`)
 
   const navigation = [
-    { name: dict.nav.courses, href: `/${lang}/courses` },
-    { name: dict.nav.branches, href: `/${lang}/branches` },
-    { name: dict.nav.schedule, href: `/${lang}/schedule` },
-    { name: dict.nav.reviews, href: `/${lang}/reviews` },
     { name: dict.nav.about, href: `/${lang}/about` },
+    { name: dict.nav.branches, href: `/${lang}/branches` },
+    { name: dict.nav.courses, href: `/${lang}/courses` },
+    { name: dict.nav.summer, href: `/${lang}/summer`, highlight: true },
+    { name: dict.nav.promos, href: `/${lang}/promo` },
+    { name: dict.nav.reviews, href: `/${lang}/reviews` },
     { name: dict.nav.contacts, href: `/${lang}/contacts` },
-    { name: dict.promo.navTitle, href: `/${lang}/promo` },
-    { name: dict.ambassador.navTitle, href: `/${lang}/ambassador` },
   ]
 
   return (
@@ -60,9 +59,11 @@ export function Header({ lang, dict }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
-                    pathname.startsWith(item.href)
-                      ? "text-amber-300"
-                      : "text-white hover:text-amber-300"
+                    item.highlight
+                      ? "text-yellow-400 hover:text-yellow-300"
+                      : pathname.startsWith(item.href)
+                        ? "text-amber-300"
+                        : "text-white hover:text-amber-300"
                   }`}
                 >
                   {item.name}
@@ -110,7 +111,11 @@ export function Header({ lang, dict }: HeaderProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10 hover:text-amber-300"
+                className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-white/10 ${
+                  item.highlight
+                    ? "text-yellow-400 hover:text-yellow-300"
+                    : "text-white hover:text-amber-300"
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
