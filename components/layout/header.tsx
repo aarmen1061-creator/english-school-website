@@ -34,22 +34,14 @@ export function Header({ lang, dict }: HeaderProps) {
       <nav className="container mx-auto px-4" aria-label="Main menu">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-8">
-            <Link href={`/${lang}`} className="relative block h-10">
+            <Link href={`/${lang}`} className="block h-10">
               <Image
-                src="/images/logo/EWE_logo_white_text.png"
+                src="/images/logo/EWE_logo_color.png"
                 alt="EwE School"
                 width={120}
                 height={80}
                 className="h-10 w-auto"
                 priority
-              />
-              <Image
-                src="/images/logo/EWE_symbol_color.png"
-                alt=""
-                width={60}
-                height={60}
-                className="absolute -top-[2px] left-[48%] -translate-x-1/2 h-[66%] w-auto"
-                aria-hidden
               />
             </Link>
 
