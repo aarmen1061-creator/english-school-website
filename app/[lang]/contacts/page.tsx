@@ -57,6 +57,20 @@ export default async function ContactsPage({
             </div>
           </div>
 
+          {/* Yandex Map */}
+          <div className="mb-10 shadow-lg rounded-2xl overflow-hidden">
+            <YandexMap
+              lang={lang}
+              branches={branches.map((b) => ({
+                id: b.id,
+                name: b.name[lang],
+                address: b.address[lang],
+                phone: b.phone,
+                coordinates: b.coordinates,
+              }))}
+            />
+          </div>
+
           {/* Branches list */}
           <h2 className="text-2xl font-bold mb-6">{dict.branches.title}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -79,20 +93,6 @@ export default async function ContactsPage({
                 </div>
               </Link>
             ))}
-          </div>
-
-          {/* Yandex Map */}
-          <div className="mt-10 shadow-lg rounded-2xl overflow-hidden">
-            <YandexMap
-              lang={lang}
-              branches={branches.map((b) => ({
-                id: b.id,
-                name: b.name[lang],
-                address: b.address[lang],
-                phone: b.phone,
-                coordinates: b.coordinates,
-              }))}
-            />
           </div>
         </div>
       </div>
