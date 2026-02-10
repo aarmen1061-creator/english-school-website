@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import type { Locale } from "@/lib/i18n/settings"
 import { branches } from "@/lib/data"
+import { YandexMap } from "@/components/yandex-map"
 
 export default async function ContactsPage({
   params,
@@ -81,14 +82,16 @@ export default async function ContactsPage({
           </div>
 
           {/* Yandex Map */}
-          <div className="mt-10 rounded-2xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e682775-516a-403a-947c-352f67ca8809&amp;source=constructor"
-              width="100%"
-              height="450"
-              frameBorder="0"
-              allowFullScreen
-              className="w-full"
+          <div className="mt-10 shadow-lg rounded-2xl overflow-hidden">
+            <YandexMap
+              lang={lang}
+              branches={branches.map((b) => ({
+                id: b.id,
+                name: b.name[lang],
+                address: b.address[lang],
+                phone: b.phone,
+                coordinates: b.coordinates,
+              }))}
             />
           </div>
         </div>
