@@ -39,15 +39,15 @@ export default async function HomePage({
                 EWE School
               </h1>
               <div className="mt-5 space-y-2">
-                <p className="flex items-center gap-3 text-xl md:text-2xl text-[#1a2744] leading-relaxed font-semibold">
+                <p className="flex items-center gap-3 text-lg md:text-xl text-[#1a2744] leading-relaxed font-normal">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {dict.hero.subtitle}
                 </p>
-                <p className="flex items-center gap-3 text-lg md:text-xl text-[#1a2744] leading-relaxed font-semibold">
+                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-normal">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {dict.hero.tagline}
                 </p>
-                <p className="flex items-center gap-3 text-lg md:text-xl text-[#1a2744] leading-relaxed font-semibold">
+                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-normal">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {dict.hero.freeLesson}
                 </p>
@@ -55,13 +55,13 @@ export default async function HomePage({
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
                 <Link
                   href={`/${lang}/enroll`}
-                  className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
+                  className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
                 >
                   {dict.hero.ctaEnroll}
                 </Link>
                 <Link
                   href={`/${lang}/branches`}
-                  className="inline-block bg-white/80 hover:bg-white text-gray-800 px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all border border-gray-200"
+                  className="inline-block bg-white/80 hover:bg-white text-gray-800 px-8 py-3 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all border border-gray-200"
                 >
                   {dict.hero.ctaBranches}
                 </Link>
