@@ -39,15 +39,15 @@ export default async function HomePage({
                 EWE School
               </h1>
               <div className="mt-5 space-y-2">
-                <p className="flex items-center gap-3 text-lg md:text-xl text-[#1a2744] leading-relaxed font-normal">
+                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {dict.hero.subtitle}
                 </p>
-                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-normal">
+                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {dict.hero.tagline}
                 </p>
-                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-normal">
+                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {dict.hero.freeLesson}
                 </p>
