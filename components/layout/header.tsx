@@ -60,7 +60,7 @@ export function Header({ lang, dict }: HeaderProps) {
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
                     item.highlight
-                      ? "text-yellow-400 hover:text-yellow-300"
+                      ? "text-yellow-400 hover:text-yellow-300 uppercase"
                       : pathname.startsWith(item.href)
                         ? "text-amber-300"
                         : "text-white hover:text-amber-300"
@@ -113,7 +113,7 @@ export function Header({ lang, dict }: HeaderProps) {
                 href={item.href}
                 className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-white/10 ${
                   item.highlight
-                    ? "text-yellow-400 hover:text-yellow-300"
+                    ? "text-yellow-400 hover:text-yellow-300 uppercase"
                     : "text-white hover:text-amber-300"
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
