@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter, Poppins, Mouse_Memoirs } from "next/font/google"
+import { Inter, Poppins, Mouse_Memoirs, Montserrat } from "next/font/google"
 import "../globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
@@ -16,6 +16,11 @@ const mouseMemoirs = Mouse_Memoirs({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-mouse",
+})
+const montserrat = Montserrat({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat",
 })
 
 export async function generateStaticParams() {
@@ -63,7 +68,7 @@ export default async function LangLayout({
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${poppins.variable} ${mouseMemoirs.variable} antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${mouseMemoirs.variable} ${montserrat.variable} antialiased`}
         data-theme="playful"
       >
         <Header lang={params.lang} dict={dict} />

@@ -19,6 +19,7 @@ const config = {
     },
     fontFamily: {
       mouse: ["var(--font-mouse)", "sans-serif"],
+      montserrat: ["var(--font-montserrat)", "sans-serif"],
     },
     extend: {
       colors: {
