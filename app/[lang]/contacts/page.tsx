@@ -79,6 +79,18 @@ export default async function ContactsPage({
               </Link>
             ))}
           </div>
+
+          {/* Yandex Map */}
+          <div className="mt-10 rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A7e682775-516a-403a-947c-352f67ca8809&amp;source=constructor"
+              width="100%"
+              height="450"
+              frameBorder="0"
+              allowFullScreen
+              className="w-full"
+            />
+          </div>
         </div>
       </div>
     </section>
