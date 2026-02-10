@@ -24,7 +24,7 @@ export default async function HomePage({
               src="/images/photos/hero/hero-lesson.jpg"
               alt=""
               fill
-              className="object-cover object-top"
+              className="object-cover object-[center_30%]"
               priority
             />
             <div className="absolute inset-0 bg-white/70" />
