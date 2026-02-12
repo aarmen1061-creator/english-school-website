@@ -173,13 +173,13 @@ export const courses: Course[] = [
       ru: [
         'Занятия в игровой форме',
         'Группы до 6 человек',
-        'Длительность 40 минут',
+        'Длительность до 80 минут',
         'Развитие речи и аудирования',
       ],
       en: [
         'Game-based lessons',
         'Groups up to 6 students',
-        '40-minute sessions',
+        'Up to 80-minute sessions',
         'Speaking and listening development',
       ],
     },
@@ -198,14 +198,14 @@ export const courses: Course[] = [
     features: {
       ru: [
         'Все 4 языковых навыка',
-        'Группы до 8 человек',
-        'Длительность 60 минут',
+        'Группы до 6 человек',
+        'Длительность до 80 минут',
         'Помощь с школьной программой',
       ],
       en: [
         'All 4 language skills',
-        'Groups up to 8 students',
-        '60-minute sessions',
+        'Groups up to 6 students',
+        'Up to 80-minute sessions',
         'School curriculum support',
       ],
     },
