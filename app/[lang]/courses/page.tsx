@@ -27,13 +27,17 @@ export default async function CoursesPage({
               className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border"
             >
               <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={course.image}
-                  alt={course.name[lang]}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+                {course.id === 'preschool' ? (
+                  <div className="w-full h-full bg-yellow-400" />
+                ) : (
+                  <Image
+                    src={course.image}
+                    alt={course.name[lang]}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                )}
               </div>
               <div className="p-6">
                 <span className="text-sm font-medium text-primary bg-blue-50 px-3 py-1 rounded-full">
