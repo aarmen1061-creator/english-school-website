@@ -37,7 +37,7 @@ export default async function ReviewsPage({
                   <div>
                     <p className="font-semibold text-gray-900">{review.author[lang]}</p>
                     {branch && (
-                      <p className="text-sm text-gray-500">{branch.name[lang]}</p>
+                      <p className="text-sm text-gray-500">{branch.address[lang]}</p>
                     )}
                   </div>
                   <span className="text-sm text-gray-400">

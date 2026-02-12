@@ -37,7 +37,7 @@ export const branches: Branch[] = [
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.5615, 37.4690],
-    yandexMapsUrl: '',
+    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/128686209977/',
   },
   {
     id: '3',
@@ -52,7 +52,7 @@ export const branches: Branch[] = [
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.5772, 37.4805],
-    yandexMapsUrl: '',
+    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/137342625080/',
   },
   {
     id: '4',
@@ -67,7 +67,7 @@ export const branches: Branch[] = [
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.5680, 37.4465],
-    yandexMapsUrl: '',
+    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/39623816484/',
   },
   {
     id: '5',
@@ -82,7 +82,7 @@ export const branches: Branch[] = [
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.6235, 37.3112],
-    yandexMapsUrl: '',
+    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/54080616315/',
   },
   {
     id: '6',
@@ -97,7 +97,7 @@ export const branches: Branch[] = [
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.6558, 37.4982],
-    yandexMapsUrl: '',
+    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/178842357663/',
   },
   {
     id: '7',
@@ -112,7 +112,7 @@ export const branches: Branch[] = [
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.6942, 37.5287],
-    yandexMapsUrl: '',
+    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/172922456146/',
   },
   {
     id: '8',
@@ -142,7 +142,7 @@ export const branches: Branch[] = [
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.5207, 37.3478],
-    yandexMapsUrl: '',
+    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/59304002722/',
   },
 ]
 
@@ -262,7 +262,7 @@ export const reviews: Review[] = [
   {
     id: '2',
     author: { ru: 'Дмитрий К.', en: 'Dmitry K.' },
-    branch: 'troitsk',
+    branch: 'lipoviy-park',
     rating: 5,
     text: {
       ru: 'Дочка с радостью бежит на занятия! Очень нравится игровой формат обучения. За 3 месяца заметный прогресс.',
@@ -273,7 +273,7 @@ export const reviews: Review[] = [
   {
     id: '3',
     author: { ru: 'Елена С.', en: 'Elena S.' },
-    branch: 'moskovskiy',
+    branch: 'leninskiy',
     rating: 5,
     text: {
       ru: 'Готовили сына к ЕГЭ по английскому. Результат — 92 балла! Спасибо преподавателям за профессионализм и терпение.',
@@ -284,7 +284,7 @@ export const reviews: Review[] = [
   {
     id: '4',
     author: { ru: 'Ольга В.', en: 'Olga V.' },
-    branch: 'kommunarka-monakhovoy',
+    branch: 'novaya-zvezda',
     rating: 5,
     text: {
       ru: 'Ходим уже второй год. Ребёнок стал уверенно общаться на английском. Очень удобное расположение филиала.',
@@ -295,7 +295,7 @@ export const reviews: Review[] = [
   {
     id: '5',
     author: { ru: 'Михаил Т.', en: 'Mikhail T.' },
-    branch: 'vatutinki',
+    branch: 'novye-vatutinki',
     rating: 5,
     text: {
       ru: 'Отличная школа! Маленькие группы, индивидуальный подход. Двое детей ходят с удовольствием.',
@@ -306,12 +306,45 @@ export const reviews: Review[] = [
   {
     id: '6',
     author: { ru: 'Наталья Р.', en: 'Natalia R.' },
-    branch: 'shcherbinka',
+    branch: 'solntsevo',
     rating: 5,
     text: {
       ru: 'Младший сын (4 года) с первого занятия был в восторге. Сейчас уже знает цвета, животных, считает на английском.',
       en: 'My youngest son (4 years old) was delighted from the first lesson. Now he already knows colors, animals, and counts in English.',
     },
     childAge: '4',
+  },
+  {
+    id: '7',
+    author: { ru: 'Ирина Б.', en: 'Irina B.' },
+    branch: 'universitet',
+    rating: 5,
+    text: {
+      ru: 'Прекрасная школа с профессиональными преподавателями. Дочь занимается год, свободно читает и понимает английскую речь.',
+      en: 'Wonderful school with professional teachers. My daughter has been studying for a year, reads freely and understands English speech.',
+    },
+    childAge: '10',
+  },
+  {
+    id: '8',
+    author: { ru: 'Сергей П.', en: 'Sergey P.' },
+    branch: 'zhk-dubrovka',
+    rating: 5,
+    text: {
+      ru: 'Сын перестал бояться говорить на английском. Занятия проходят интересно, преподаватели умеют заинтересовать детей.',
+      en: 'My son stopped being afraid to speak English. Classes are interesting, teachers know how to engage children.',
+    },
+    childAge: '8',
+  },
+  {
+    id: '9',
+    author: { ru: 'Мария Л.', en: 'Maria L.' },
+    branch: 'home-city',
+    rating: 5,
+    text: {
+      ru: 'Очень довольны результатами! Ребёнок с удовольствием делает домашние задания и ждёт следующего занятия.',
+      en: 'Very satisfied with the results! The child enjoys doing homework and looks forward to the next lesson.',
+    },
+    childAge: '6',
   },
 ]
