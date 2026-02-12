@@ -236,6 +236,32 @@ export const courses: Course[] = [
       ],
     },
   },
+  {
+    id: 'adults',
+    slug: 'adults',
+    ageGroup: 'adults',
+    name: { ru: 'Взрослые', en: 'Adults' },
+    ageRange: { ru: '18+ лет', en: '18+ years' },
+    image: '/images/photos/courses/adults.jpg',
+    description: {
+      ru: 'Английский для работы, путешествий и саморазвития. Гибкий график, индивидуальный подход к целям каждого студента.',
+      en: 'English for work, travel and self-development. Flexible schedule, individual approach to each student\'s goals.',
+    },
+    features: {
+      ru: [
+        'Разговорная практика с носителями',
+        'Группы до 6 человек',
+        'Длительность 80 минут',
+        'Бизнес-английский и общий курс',
+      ],
+      en: [
+        'Conversational practice with native speakers',
+        'Groups up to 6 students',
+        '80-minute sessions',
+        'Business English and general course',
+      ],
+    },
+  },
 ]
 
 export interface Review {
