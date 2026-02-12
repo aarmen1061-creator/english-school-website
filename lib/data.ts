@@ -218,20 +218,20 @@ export const courses: Course[] = [
     ageRange: { ru: '13–17 лет', en: '13–17 years' },
     image: '/images/photos/courses/teens.jpg',
     description: {
-      ru: 'Подготовка к ОГЭ/ЕГЭ, разговорный английский, международные экзамены. Актуальные темы и современные методики.',
-      en: 'Exam preparation, conversational English, international exams. Relevant topics and modern methods.',
+      ru: 'Настоящий разговорный английский, подготовка к международным экзаменам, полная готовность к ОГЭ/ЕГЭ.',
+      en: 'Real conversational English, international exam preparation, full readiness for state exams.',
     },
     features: {
       ru: [
         'Подготовка к ОГЭ и ЕГЭ',
-        'Группы до 8 человек',
-        'Длительность 90 минут',
+        'Группы до 6 человек',
+        'Длительность 80 минут',
         'Международные сертификаты',
       ],
       en: [
         'State exam preparation',
-        'Groups up to 8 students',
-        '90-minute sessions',
+        'Groups up to 6 students',
+        '80-minute sessions',
         'International certificates',
       ],
     },
