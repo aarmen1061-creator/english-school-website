@@ -68,7 +68,7 @@ export default async function LangLayout({
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${poppins.variable} ${mouseMemoirs.variable} ${montserrat.variable} antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${mouseMemoirs.variable} ${montserrat.variable} font-sans antialiased`}
         data-theme="playful"
       >
         <Header lang={params.lang} dict={dict} />

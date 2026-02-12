@@ -31,7 +31,7 @@ export default async function HomePage({
           </div>
           {/* Text content */}
           <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 flex items-center h-full">
-            <div className="max-w-2xl font-montserrat">
+            <div className="max-w-2xl">
               <p className="text-lg md:text-xl text-[#1a2744] font-medium uppercase tracking-wider">
                 {dict.hero.network}
               </p>

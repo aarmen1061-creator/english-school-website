@@ -18,6 +18,7 @@ const config = {
       },
     },
     fontFamily: {
+      sans: ["var(--font-montserrat)", "sans-serif"],
       mouse: ["var(--font-mouse)", "sans-serif"],
       montserrat: ["var(--font-montserrat)", "sans-serif"],
     },
