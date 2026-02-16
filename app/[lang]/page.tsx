@@ -32,10 +32,7 @@ export default async function HomePage({
           {/* Text content */}
           <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 flex items-center h-full">
             <div className="max-w-2xl">
-              <p className="text-lg md:text-xl text-[#1a2744] font-medium uppercase tracking-wider">
-                EWE School
-              </p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1a2744] mt-4 font-bold leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1a2744] font-bold leading-tight">
                 {dict.hero.subtitle}
               </h1>
               <div className="mt-5 space-y-2">
