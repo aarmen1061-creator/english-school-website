@@ -65,6 +65,32 @@ function EnrollForm({ lang }: { lang: Locale }) {
     }
   }
 
+  const formatPhoneNumber = (value: string) => {
+    // Удаляем все символы кроме цифр
+    const cleaned = value.replace(/\D/g, "")
+
+    // Если начинается с 8, заменяем на 7
+    let formatted = cleaned.startsWith("8") ? "7" + cleaned.slice(1) : cleaned
+
+    // Если начинается с 9, добавляем 7 в начало
+    if (formatted.startsWith("9")) {
+      formatted = "7" + formatted
+    }
+
+    // Форматируем номер
+    if (formatted.length === 0) return ""
+    if (formatted.length <= 1) return "+7"
+    if (formatted.length <= 4) return `+7 (${formatted.slice(1)}`
+    if (formatted.length <= 7) return `+7 (${formatted.slice(1, 4)}) ${formatted.slice(4)}`
+    if (formatted.length <= 9) return `+7 (${formatted.slice(1, 4)}) ${formatted.slice(4, 7)}-${formatted.slice(7)}`
+    return `+7 (${formatted.slice(1, 4)}) ${formatted.slice(4, 7)}-${formatted.slice(7, 9)}-${formatted.slice(9, 11)}`
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhoneNumber(e.target.value)
+    setFormData((prev) => ({ ...prev, phone: formatted }))
+  }
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
@@ -142,7 +168,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
                   type="tel"
                   name="phone"
                   value={formData.phone}
-                  onChange={handleChange}
+                  onChange={handlePhoneChange}
                   required
                   placeholder="+7 (___) ___-__-__"
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
