@@ -51,6 +51,72 @@ export default async function PromoPage({
   return (
     <>
       {/* Hero */}
+      <section className="py-16 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-sm">
+              {dict.promo.navTitle}
+            </h1>
+            <p className="text-xl text-white/90 mt-4 leading-relaxed">
+              {dict.promo.pageSubtitle}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Promo Cards */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+            {/* Promo 1: Refer a Friend */}
+            <div className="bg-gradient-to-br from-orange-400 via-amber-400 to-yellow-400 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all">
+              <div className="w-16 h-16 bg-white/30 backdrop-blur rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                </svg>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                {dict.promo.title}
+              </h2>
+              <p className="text-white/90 text-lg mb-6">
+                {dict.promo.subtitle}
+              </p>
+              <Link
+                href="#refer-friend"
+                className="inline-block bg-white text-orange-600 px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all"
+              >
+                {dict.common.learnMore}
+              </Link>
+            </div>
+
+            {/* Promo 2: Ambassador */}
+            <div className="bg-gradient-to-br from-[#1a2744] via-blue-800 to-blue-900 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                </svg>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                {dict.ambassador.title}
+              </h2>
+              <p className="text-white/90 text-lg mb-6">
+                {dict.ambassador.subtitle}
+              </p>
+              <Link
+                href={`/${lang}/ambassador`}
+                className="inline-block bg-white text-[#1a2744] px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all"
+              >
+                {dict.common.learnMore}
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Refer a Friend Details */}
+      <div id="refer-friend">
       <section className="py-16 bg-gradient-to-br from-orange-400 via-amber-400 to-yellow-400">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
@@ -139,6 +205,7 @@ export default async function PromoPage({
           </Link>
         </div>
       </section>
+      </div>
     </>
   )
 }
