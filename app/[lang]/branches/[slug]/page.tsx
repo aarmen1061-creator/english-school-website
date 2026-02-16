@@ -91,12 +91,6 @@ export default async function BranchDetailPage({
             >
               {dict.nav.enroll}
             </Link>
-            <Link
-              href={`/${lang}/schedule?branch=${branch.slug}`}
-              className="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold text-center hover:bg-primary/5 transition-colors"
-            >
-              {dict.branches.schedule}
-            </Link>
           </div>
         </div>
       </div>

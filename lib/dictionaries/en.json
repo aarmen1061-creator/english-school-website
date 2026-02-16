@@ -6,7 +6,6 @@
   "nav": {
     "courses": "Courses",
     "branches": "Branches",
-    "schedule": "Schedule",
     "reviews": "Reviews",
     "about": "About",
     "contacts": "Contacts",
@@ -65,7 +64,6 @@
     "subtitle": "9 branches in Moscow",
     "viewOnMap": "View on Map",
     "details": "Details",
-    "schedule": "Schedule",
     "phone": "Phone",
     "address": "Address"
   },

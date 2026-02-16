@@ -40,11 +40,6 @@ export function Footer({ lang, dict }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href={`/${lang}/schedule`} className="text-sm hover:text-white transition-colors">
-                  {dict.nav.schedule}
-                </Link>
-              </li>
-              <li>
                 <Link href={`/${lang}/reviews`} className="text-sm hover:text-white transition-colors">
                   {dict.nav.reviews}
                 </Link>

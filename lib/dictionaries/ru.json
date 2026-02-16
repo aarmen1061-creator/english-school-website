@@ -6,7 +6,6 @@
   "nav": {
     "courses": "Курсы",
     "branches": "Филиалы",
-    "schedule": "Расписание",
     "reviews": "Отзывы",
     "about": "О нас",
     "contacts": "Контакты",
@@ -65,7 +64,6 @@
     "subtitle": "9 филиалов в Москве",
     "viewOnMap": "На карте",
     "details": "Подробнее",
-    "schedule": "Расписание",
     "phone": "Телефон",
     "address": "Адрес"
   },
