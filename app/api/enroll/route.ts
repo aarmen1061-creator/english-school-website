@@ -1,108 +1,57 @@
 import { NextRequest, NextResponse } from "next/server"
-import { z } from "zod"
 
-const enrollSchema = z.object({
-  parentName: z.string().min(2),
-  phone: z.string().min(6),
-  email: z.string().email().optional().or(z.literal("")),
-  childName: z.string().min(2),
-  childAge: z.string().min(1),
-  branch: z.string().min(1),
-  course: z.string().optional(),
-  message: z.string().optional(),
-})
-
-async function sendTelegramNotification(data: z.infer<typeof enrollSchema>) {
-  const token = process.env.TELEGRAM_BOT_TOKEN
-  const chatId = process.env.TELEGRAM_CHAT_ID
-
-  if (!token || !chatId) return
-
-  const text = [
-    "📝 Новая заявка на обучение!",
-    "",
-    `👤 Родитель: ${data.parentName}`,
-    `📞 Телефон: ${data.phone}`,
-    data.email ? `📧 Email: ${data.email}` : "",
-    `👦 Ребёнок: ${data.childName}, ${data.childAge} лет`,
-    `📍 Филиал: ${data.branch}`,
-    data.course ? `📚 Курс: ${data.course}` : "",
-    data.message ? `💬 Комментарий: ${data.message}` : "",
-  ]
-    .filter(Boolean)
-    .join("\n")
-
-  try {
-    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text,
-        parse_mode: "HTML",
-      }),
-    })
-  } catch (err) {
-    console.error("Telegram notification failed:", err)
-  }
-}
-
-async function sendEmailNotification(data: z.infer<typeof enrollSchema>) {
-  const apiKey = process.env.RESEND_API_KEY
-  const fromEmail = process.env.FROM_EMAIL
-  const toEmail = process.env.NOTIFICATION_EMAIL
-
-  if (!apiKey || !fromEmail || !toEmail) return
-
-  try {
-    await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        from: fromEmail,
-        to: [toEmail],
-        subject: `Новая заявка: ${data.parentName} — ${data.childName}`,
-        html: `
-          <h2>Новая заявка на обучение</h2>
-          <p><strong>Родитель:</strong> ${data.parentName}</p>
-          <p><strong>Телефон:</strong> ${data.phone}</p>
-          ${data.email ? `<p><strong>Email:</strong> ${data.email}</p>` : ""}
-          <p><strong>Ребёнок:</strong> ${data.childName}, ${data.childAge} лет</p>
-          <p><strong>Филиал:</strong> ${data.branch}</p>
-          ${data.course ? `<p><strong>Курс:</strong> ${data.course}</p>` : ""}
-          ${data.message ? `<p><strong>Комментарий:</strong> ${data.message}</p>` : ""}
-        `,
-      }),
-    })
-  } catch (err) {
-    console.error("Email notification failed:", err)
-  }
-}
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "8504752869:AAHhS3MQSovi33lsgm-ul6PBnw0xpjXjvBM"
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || "301635514"
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const data = enrollSchema.parse(body)
+    const data = await request.json()
 
-    // Send notifications in parallel
-    await Promise.allSettled([
-      sendTelegramNotification(data),
-      sendEmailNotification(data),
-    ])
+    // Формируем сообщение для Telegram
+    const message = `
+🎓 <b>Новая заявка на запись!</b>
+
+👤 <b>Родитель:</b> ${data.parentName}
+📱 <b>Телефон:</b> ${data.phone}
+${data.email ? `📧 <b>Email:</b> ${data.email}` : ''}
+
+👶 <b>Ребёнок:</b> ${data.childName}
+🎂 <b>Возраст:</b> ${data.childAge} ${data.childAge === '1' ? 'год' : data.childAge >= 2 && data.childAge <= 4 ? 'года' : 'лет'}
+${data.branch ? `🏢 <b>Филиал:</b> ${data.branch}` : ''}
+${data.course ? `📚 <b>Курс:</b> ${data.course}` : ''}
+${data.message ? `💬 <b>Комментарий:</b> ${data.message}` : ''}
+
+🕐 <b>Дата:</b> ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })}
+    `.trim()
+
+    // Отправляем в Telegram
+    const telegramResponse = await fetch(
+      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: message,
+          parse_mode: "HTML",
+        }),
+      }
+    )
+
+    const telegramData = await telegramResponse.json()
+
+    if (!telegramData.ok) {
+      console.error("Telegram API error:", telegramData)
+      throw new Error("Failed to send Telegram message")
+    }
 
     return NextResponse.json({ success: true })
-  } catch (err) {
-    if (err instanceof z.ZodError) {
-      return NextResponse.json(
-        { error: "Invalid form data", details: err.errors },
-        { status: 400 }
-      )
-    }
+  } catch (error) {
+    console.error("Error processing enrollment:", error)
     return NextResponse.json(
-      { error: "Internal server error" },
+      { success: false, error: "Failed to process enrollment" },
       { status: 500 }
     )
   }
