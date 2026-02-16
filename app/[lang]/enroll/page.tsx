@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import { courses } from "@/lib/data"
+import { branches, courses } from "@/lib/data"
 import type { Locale } from "@/lib/i18n/settings"
 
 export default function EnrollPage({
@@ -19,6 +19,7 @@ export default function EnrollPage({
 
 function EnrollForm({ lang }: { lang: Locale }) {
   const searchParams = useSearchParams()
+  const preselectedBranch = searchParams.get("branch") || ""
   const preselectedCourse = searchParams.get("course") || ""
 
   const [formData, setFormData] = useState({
@@ -27,6 +28,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
     email: "",
     childName: "",
     childAge: "",
+    branch: preselectedBranch,
     course: preselectedCourse,
     message: "",
   })
@@ -51,6 +53,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
           email: "",
           childName: "",
           childAge: "",
+          branch: "",
           course: "",
           message: "",
         })
@@ -182,6 +185,23 @@ function EnrollForm({ lang }: { lang: Locale }) {
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{t.selectBranch}</label>
+              <select
+                name="branch"
+                value={formData.branch}
+                onChange={handleChange}
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              >
+                <option value="">{t.selectBranch}</option>
+                {branches.map((b) => (
+                  <option key={b.slug} value={b.slug}>
+                    {b.name[lang]}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div>
