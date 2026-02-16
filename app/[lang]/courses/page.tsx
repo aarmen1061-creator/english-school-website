@@ -20,7 +20,7 @@ export default async function CoursesPage({
           <p className="text-gray-600 mt-3 text-lg">{dict.courses.subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {courses.map((course) => (
             <div
               key={course.id}
@@ -53,16 +53,10 @@ export default async function CoursesPage({
                   ))}
                 </ul>
 
-                <div className="mt-6 flex gap-3">
-                  <Link
-                    href={`/${lang}/courses/${course.slug}`}
-                    className="text-primary font-semibold hover:underline"
-                  >
-                    {dict.courses.learnMore}
-                  </Link>
+                <div className="mt-6">
                   <Link
                     href={`/${lang}/enroll?course=${course.id}`}
-                    className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors"
+                    className="block text-center bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors"
                   >
                     {dict.courses.enrollNow}
                   </Link>
