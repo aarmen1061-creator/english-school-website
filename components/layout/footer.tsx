@@ -98,13 +98,10 @@ export function Footer({ lang, dict }: FooterProps) {
             </ul>
 
             <div className="flex gap-3 mt-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-primary flex items-center justify-center transition-colors" aria-label="VK">
-                <span className="text-xs font-medium">VK</span>
-              </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-primary flex items-center justify-center transition-colors" aria-label="Telegram">
+              <a href="https://t.me/EwE_school_admin" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-primary flex items-center justify-center transition-colors" aria-label="Telegram">
                 <span className="text-xs font-medium">TG</span>
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-primary flex items-center justify-center transition-colors" aria-label="WhatsApp">
+              <a href="https://wa.link/cac4r4" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-primary flex items-center justify-center transition-colors" aria-label="WhatsApp">
                 <span className="text-xs font-medium">WA</span>
               </a>
             </div>
