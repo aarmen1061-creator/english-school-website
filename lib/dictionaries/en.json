@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "EwE School — Language Courses for Children in Moscow",
-    "description": "Teaching children aged 3 to 17 English and other languages. 9 branches in Moscow. Sign up for a free trial lesson!"
+    "description": "Teaching children and adults English and other languages. 9 branches in Moscow. Sign up for a free trial lesson!"
   },
   "nav": {
     "courses": "Courses",
@@ -21,7 +21,7 @@
     "subtitle": "Your child will speak English in 2 months",
     "tagline": "Learning only with native speakers",
     "freeLesson": "First lesson is free",
-    "description": "Teaching children aged 3 to 17 English through games and engagement. 9 branches in Moscow, experienced teachers, results in just 3 months.",
+    "description": "Teaching children and adults English through games and engagement. 9 branches in Moscow, experienced teachers, results in just 3 months.",
     "ctaEnroll": "Sign Up for a Trial Lesson",
     "ctaBranches": "Choose a Branch"
   },
@@ -117,7 +117,7 @@
     "error": "An error occurred. Please try again."
   },
   "footer": {
-    "description": "Teaching children aged 3 to 17 foreign languages. 9 branches in Moscow.",
+    "description": "Teaching children and adults foreign languages. 9 branches in Moscow.",
     "navigation": "Navigation",
     "info": "Information",
     "contactsTitle": "Contacts",
