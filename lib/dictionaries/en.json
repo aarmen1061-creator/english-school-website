@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "EwE School — Language Courses for Children in New Moscow",
-    "description": "Teaching children aged 3 to 17 English and other languages. 8 branches in New Moscow. Sign up for a free trial lesson!"
+    "title": "EwE School — Language Courses for Children in Moscow",
+    "description": "Teaching children aged 3 to 17 English and other languages. 9 branches in Moscow. Sign up for a free trial lesson!"
   },
   "nav": {
     "courses": "Courses",
@@ -18,10 +18,10 @@
   "hero": {
     "network": "Foreign Language School Network",
     "title": "English for Kids",
-    "subtitle": "Your child will speak English in 3 months",
+    "subtitle": "Your child will speak English in 2 months",
     "tagline": "Learning only with native speakers",
     "freeLesson": "First lesson is free",
-    "description": "Teaching children aged 3 to 17 English through games and engagement. 8 branches in New Moscow, experienced teachers, results in just 3 months.",
+    "description": "Teaching children aged 3 to 17 English through games and engagement. 9 branches in Moscow, experienced teachers, results in just 3 months.",
     "ctaEnroll": "Sign Up for a Trial Lesson",
     "ctaBranches": "Choose a Branch"
   },
@@ -35,8 +35,8 @@
       "description": "Learning through games and fun"
     },
     "branches": {
-      "title": "8 Branches",
-      "description": "In New Moscow — choose the nearest one"
+      "title": "9 Branches",
+      "description": "In Moscow — choose the nearest one"
     }
   },
   "courses": {
@@ -62,7 +62,7 @@
   },
   "branches": {
     "title": "Our Branches",
-    "subtitle": "8 branches in New Moscow",
+    "subtitle": "9 branches in Moscow",
     "viewOnMap": "View on Map",
     "details": "Details",
     "schedule": "Schedule",
@@ -92,7 +92,7 @@
   },
   "about": {
     "title": "About Us",
-    "subtitle": "EwE School — language courses network for children"
+    "subtitle": "EwE School — language school network for children and adults"
   },
   "contacts": {
     "title": "Contacts",
@@ -117,7 +117,7 @@
     "error": "An error occurred. Please try again."
   },
   "footer": {
-    "description": "Teaching children aged 3 to 17 foreign languages. 8 branches in New Moscow.",
+    "description": "Teaching children aged 3 to 17 foreign languages. 9 branches in Moscow.",
     "navigation": "Navigation",
     "info": "Information",
     "contactsTitle": "Contacts",

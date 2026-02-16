@@ -33,16 +33,12 @@ export default async function HomePage({
           <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 flex items-center h-full">
             <div className="max-w-2xl">
               <p className="text-lg md:text-xl text-[#1a2744] font-medium uppercase tracking-wider">
-                {dict.hero.network}
-              </p>
-              <h1 className="font-mouse text-5xl md:text-6xl lg:text-7xl text-[#1a2744] mt-2">
                 EWE School
+              </p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1a2744] mt-4 font-bold leading-tight">
+                {dict.hero.subtitle}
               </h1>
               <div className="mt-5 space-y-2">
-                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
-                  <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
-                  {dict.hero.subtitle}
-                </p>
                 <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {dict.hero.tagline}
@@ -139,10 +135,10 @@ export default async function HomePage({
             <h2 className="text-3xl md:text-4xl font-bold">{dict.courses.title}</h2>
             <p className="text-gray-600 mt-2 text-lg">{dict.courses.subtitle}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {courses.map((course) => (
               <div key={course.id} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
                   <Image
                     src={course.image}
                     alt={course.name[lang]}
