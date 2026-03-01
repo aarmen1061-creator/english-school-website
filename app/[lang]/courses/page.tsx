@@ -65,7 +65,111 @@ export default async function CoursesPage({
             </div>
           ))}
         </div>
+
+        {/* Блок: Как мы обучаем дошкольников */}
+        <MethodBlock
+          title={dict.courses.preschoolTitle}
+          steps={[
+            { num: "1", title: dict.courses.preschoolStep1Title, desc: dict.courses.preschoolStep1Desc },
+            { num: "2", title: dict.courses.preschoolStep2Title, desc: dict.courses.preschoolStep2Desc },
+            { num: "3", title: dict.courses.preschoolStep3Title, desc: dict.courses.preschoolStep3Desc },
+            { num: "4", title: dict.courses.preschoolStep4Title, desc: dict.courses.preschoolStep4Desc },
+          ]}
+          result={dict.courses.preschoolResult}
+          resultLabel={dict.courses.resultLabel}
+          enrollLabel={dict.courses.enrollNow}
+          lang={lang}
+          color="bg-orange-500"
+        />
+
+        {/* Блок: Как мы обучаем школьников */}
+        <MethodBlock
+          title={dict.courses.kidsTitle}
+          steps={[
+            { num: "1", title: dict.courses.kidsStep1Title, desc: dict.courses.kidsStep1Desc },
+            { num: "2", title: dict.courses.kidsStep2Title, desc: dict.courses.kidsStep2Desc },
+            { num: "3", title: dict.courses.kidsStep3Title, desc: dict.courses.kidsStep3Desc },
+            { num: "4", title: dict.courses.kidsStep4Title, desc: dict.courses.kidsStep4Desc },
+          ]}
+          result={dict.courses.kidsResult}
+          resultLabel={dict.courses.resultLabel}
+          enrollLabel={dict.courses.enrollNow}
+          lang={lang}
+          color="bg-green-600"
+        />
+
+        {/* Блок: Как мы обучаем подростков */}
+        <MethodBlock
+          title={dict.courses.teensTitle}
+          steps={[
+            { num: "1", title: dict.courses.teensStep1Title, desc: dict.courses.teensStep1Desc },
+            { num: "2", title: dict.courses.teensStep2Title, desc: dict.courses.teensStep2Desc },
+            { num: "3", title: dict.courses.teensStep3Title, desc: dict.courses.teensStep3Desc },
+            { num: "4", title: dict.courses.teensStep4Title, desc: dict.courses.teensStep4Desc },
+          ]}
+          result={dict.courses.teensResult}
+          resultLabel={dict.courses.resultLabel}
+          enrollLabel={dict.courses.enrollNow}
+          lang={lang}
+          color="bg-primary"
+        />
+
+        {/* Блок: Как мы обучаем взрослых */}
+        <MethodBlock
+          title={dict.courses.adultsTitle}
+          steps={[
+            { num: "1", title: dict.courses.adultsStep1Title, desc: dict.courses.adultsStep1Desc },
+            { num: "2", title: dict.courses.adultsStep2Title, desc: dict.courses.adultsStep2Desc },
+            { num: "3", title: dict.courses.adultsStep3Title, desc: dict.courses.adultsStep3Desc },
+            { num: "4", title: dict.courses.adultsStep4Title, desc: dict.courses.adultsStep4Desc },
+          ]}
+          result={dict.courses.adultsResult}
+          resultLabel={dict.courses.resultLabel}
+          enrollLabel={dict.courses.enrollNow}
+          lang={lang}
+          color="bg-[#1a2744]"
+        />
+
       </div>
     </section>
+  )
+}
+
+function MethodBlock({
+  title, steps, result, resultLabel, enrollLabel, lang, color,
+}: {
+  title: string
+  steps: { num: string; title: string; desc: string }[]
+  result: string
+  resultLabel: string
+  enrollLabel: string
+  lang: string
+  color: string
+}) {
+  return (
+    <div className="mt-20 max-w-4xl mx-auto">
+      <h2 className="text-3xl font-bold text-center text-[#1a2744] mb-10">{title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {steps.map((step) => (
+          <div key={step.num} className="bg-white rounded-2xl border p-6 flex gap-4 shadow-sm hover:shadow-md transition-shadow">
+            <div className={`w-10 h-10 rounded-full ${color} text-white flex items-center justify-center font-bold text-lg flex-shrink-0`}>
+              {step.num}
+            </div>
+            <div>
+              <h3 className="font-bold text-[#1a2744] text-lg leading-tight">{step.title}</h3>
+              <p className="text-gray-600 mt-2 text-sm leading-relaxed">{step.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className={`mt-8 rounded-2xl p-5 text-white text-center ${color}`}>
+        <span className="font-bold">{resultLabel} </span>{result}
+      </div>
+      <div className="text-center mt-6">
+        <Link href={`/${lang}/enroll`} className={`inline-block ${color} text-white px-8 py-3 rounded-full font-semibold opacity-90 hover:opacity-100 transition-opacity`}>
+          {enrollLabel}
+        </Link>
+      </div>
+    </div>
   )
 }
