@@ -44,7 +44,7 @@ export async function generateMetadata({
       "английский для детей",
       "English for kids",
       "курсы английского",
-      "Новая Москва",
+      "Москва",
       "Коммунарка",
     ],
     openGraph: {
@@ -67,6 +67,33 @@ export default async function LangLayout({
 
   return (
     <html lang={params.lang} suppressHydrationWarning>
+      <head>
+        {/* Yandex.Metrika counter */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(m,e,t,r,i,k,a){
+                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+              })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+              ym(107144239, 'init', {
+                ssr: true,
+                webvisor: true,
+                clickmap: true,
+                ecommerce: "dataLayer",
+                accurateTrackBounce: true,
+                trackLinks: true
+              });
+            `,
+          }}
+        />
+        <noscript>
+          {`<div><img src="https://mc.yandex.ru/watch/107144239" style="position:absolute; left:-9999px;" alt="" /></div>`}
+        </noscript>
+        {/* /Yandex.Metrika counter */}
+      </head>
       <body
         className={`${inter.variable} ${poppins.variable} ${mouseMemoirs.variable} ${montserrat.variable} font-sans antialiased`}
         data-theme="playful"
