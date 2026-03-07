@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import type { Locale } from "@/lib/i18n/settings"
-import { courses, branches, reviews } from "@/lib/data"
+import { courses, reviews } from "@/lib/data"
 import { PromoSlider } from "@/components/promo-slider"
 
 export default async function HomePage({
@@ -140,7 +140,7 @@ export default async function HomePage({
                     src={course.image}
                     alt={course.name[lang]}
                     fill
-                    className="object-cover"
+                    className={`object-cover ${course.id === 'teens' ? 'object-top' : 'object-center'}`}
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
