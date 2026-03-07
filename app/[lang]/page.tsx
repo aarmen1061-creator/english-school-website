@@ -135,7 +135,7 @@ export default async function HomePage({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {courses.map((course) => (
               <div key={course.id} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative h-40 overflow-hidden">
+                <div className={`relative overflow-hidden ${course.id === 'teens' ? 'h-64 lg:h-40' : 'h-40'}`}>
                   <Image
                     src={course.image}
                     alt={course.name[lang]}
