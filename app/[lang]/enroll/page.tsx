@@ -1,6 +1,7 @@
 "use client"
 
 import { Suspense, useState } from "react"
+import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { branches, courses } from "@/lib/data"
 import type { Locale } from "@/lib/i18n/settings"
@@ -32,6 +33,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
     course: preselectedCourse,
     message: "",
   })
+  const [consent, setConsent] = useState(false)
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -258,6 +260,27 @@ function EnrollForm({ lang }: { lang: Locale }) {
               />
             </div>
 
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                required
+                className="mt-1 w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary flex-shrink-0"
+              />
+              <span className="text-xs text-gray-500">
+                {lang === "ru" ? (
+                  <>Я даю согласие на обработку персональных данных в соответствии с{" "}
+                    <Link href={`/${lang}/privacy`} className="text-primary underline" target="_blank">политикой конфиденциальности</Link>
+                  </>
+                ) : (
+                  <>I consent to the processing of personal data in accordance with the{" "}
+                    <Link href={`/${lang}/privacy`} className="text-primary underline" target="_blank">privacy policy</Link>
+                  </>
+                )}
+              </span>
+            </label>
+
             {status === "error" && (
               <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-red-700 text-sm">
                 {t.error}
@@ -266,7 +289,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
 
             <button
               type="submit"
-              disabled={status === "loading"}
+              disabled={status === "loading" || !consent}
               className="w-full bg-primary text-white py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "loading" ? t.sending : t.submit}
