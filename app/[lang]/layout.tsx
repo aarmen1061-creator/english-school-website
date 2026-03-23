@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { Inter, Poppins, Mouse_Memoirs, Montserrat } from "next/font/google"
+import { Inter, Mouse_Memoirs, Montserrat } from "next/font/google"
+import Script from "next/script"
 import "../globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
@@ -7,11 +8,6 @@ import { i18n, type Locale } from "@/lib/i18n/settings"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" })
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-})
 const mouseMemoirs = Mouse_Memoirs({
   subsets: ["latin"],
   weight: "400",
@@ -67,9 +63,14 @@ export default async function LangLayout({
 
   return (
     <html lang={params.lang} suppressHydrationWarning>
-      <head>
-        {/* Yandex.Metrika counter */}
-        <script
+      <head />
+      <body
+        className={`${inter.variable} ${mouseMemoirs.variable} ${montserrat.variable} font-sans antialiased`}
+        data-theme="playful"
+      >
+        <Script
+          id="yandex-metrika"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(m,e,t,r,i,k,a){
@@ -91,14 +92,8 @@ export default async function LangLayout({
           }}
         />
         <noscript>
-          {`<div><img src="https://mc.yandex.ru/watch/107144239" style="position:absolute; left:-9999px;" alt="" /></div>`}
+          <div><img src="https://mc.yandex.ru/watch/107144239" style={{position: 'absolute', left: '-9999px'}} alt="" /></div>
         </noscript>
-        {/* /Yandex.Metrika counter */}
-      </head>
-      <body
-        className={`${inter.variable} ${poppins.variable} ${mouseMemoirs.variable} ${montserrat.variable} font-sans antialiased`}
-        data-theme="playful"
-      >
         <Header lang={params.lang} dict={dict} />
         <main className="min-h-screen">{children}</main>
         <Footer lang={params.lang} dict={dict} />
