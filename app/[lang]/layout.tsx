@@ -29,7 +29,10 @@ export async function generateMetadata({
   params: { lang: Locale }
 }): Promise<Metadata> {
   const dict = await getDictionary(params.lang)
+  const url = `https://eweschool.ru/${params.lang}`
+  const ogImage = "https://eweschool.ru/images/photos/hero/hero-lesson.jpg"
   return {
+    metadataBase: new URL("https://eweschool.ru"),
     title: {
       default: dict.meta.title,
       template: `%s | EwE School`,
@@ -43,11 +46,28 @@ export async function generateMetadata({
       "Москва",
       "Коммунарка",
     ],
+    alternates: {
+      canonical: url,
+      languages: {
+        ru: "https://eweschool.ru/ru",
+        en: "https://eweschool.ru/en",
+        "x-default": "https://eweschool.ru/ru",
+      },
+    },
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
+      url,
+      siteName: "EwE School",
       locale: params.lang === "ru" ? "ru_RU" : "en_US",
       type: "website",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: dict.meta.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.title,
+      description: dict.meta.description,
+      images: [ogImage],
     },
   }
 }
@@ -94,6 +114,34 @@ export default async function LangLayout({
         <noscript>
           <div><img src="https://mc.yandex.ru/watch/107144239" style={{position: 'absolute', left: '-9999px'}} alt="" /></div>
         </noscript>
+        <Script
+          id="ld-org"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "EwE School",
+              alternateName: "Школа английского EwE",
+              url: "https://eweschool.ru",
+              logo: "https://eweschool.ru/images/logo/EWE_logo_color.png",
+              image: "https://eweschool.ru/images/photos/hero/hero-lesson.jpg",
+              description: dict.meta.description,
+              telephone: "+7 (925) 263-00-88",
+              email: "info@eweschool.ru",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "RU",
+                addressLocality: "Москва",
+              },
+              sameAs: [
+                "https://t.me/EwE_school_admin",
+                "https://wa.link/cac4r4",
+              ],
+            }),
+          }}
+        />
         <Header lang={params.lang} dict={dict} />
         <main className="min-h-screen">{children}</main>
         <Footer lang={params.lang} dict={dict} />
