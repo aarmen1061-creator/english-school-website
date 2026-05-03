@@ -22,8 +22,8 @@ export const siteConfigurations: Record<SiteType, SiteConfiguration> = {
     theme: 'playful',
     primaryColor: 'hsl(221 83% 53%)', // Blue
     description: {
-      ru: 'Школа английского языка в Новой Москве',
-      en: 'English Language School in New Moscow'
+      ru: 'Школа английского языка в Москве',
+      en: 'English Language School in Moscow'
     }
   },
   kindergarten: {

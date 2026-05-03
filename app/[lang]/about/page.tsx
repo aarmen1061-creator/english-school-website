@@ -12,10 +12,10 @@ export default async function AboutPage({
   const lang = params.lang
 
   const stats = [
-    { value: "8", label: lang === "ru" ? "Филиалов" : "Branches" },
+    { value: "9", label: lang === "ru" ? "Филиалов" : "Branches" },
     { value: "1000+", label: lang === "ru" ? "Учеников" : "Students" },
     { value: "50+", label: lang === "ru" ? "Преподавателей" : "Teachers" },
-    { value: "8+", label: lang === "ru" ? "Лет опыта" : "Years of experience" },
+    { value: "10+", label: lang === "ru" ? "Лет опыта" : "Years of experience" },
   ]
 
   return (
@@ -57,8 +57,8 @@ export default async function AboutPage({
               {lang === "ru" ? (
                 <>
                   <p>
-                    <strong>EwE School</strong> — это сеть курсов иностранных языков для детей от 3 до 17 лет
-                    в Новой Москве. Мы работаем с 2015 года и за это время помогли более чем тысяче детей
+                    <strong>EwE School</strong> — это сеть школ иностранных языков для детей и взрослых
+                    в Москве. Мы работаем с 2015 года и за это время помогли более чем тысяче учеников
                     полюбить английский язык.
                   </p>
                   <p>
@@ -70,8 +70,8 @@ export default async function AboutPage({
               ) : (
                 <>
                   <p>
-                    <strong>EwE School</strong> is a network of foreign language courses for children aged 3 to 17
-                    in New Moscow. We have been working since 2015 and have helped over a thousand children
+                    <strong>EwE School</strong> is a network of foreign language schools for children and adults
+                    in Moscow. We have been working since 2015 and have helped over a thousand students
                     fall in love with English.
                   </p>
                   <p>
@@ -106,7 +106,7 @@ export default async function AboutPage({
               {lang === "ru" ? (
                 <>
                   <p>
-                    8 филиалов в Новой Москве — в Коммунарке, Троицке, Московском, Ватутинках,
+                    9 филиалов в Москве — в Коммунарке, Троицке, Московском, Ватутинках,
                     Сосенском, Щербинке и Первомайском. Мы постоянно расширяемся, чтобы быть ближе к вам.
                   </p>
                   <p>
@@ -118,7 +118,7 @@ export default async function AboutPage({
               ) : (
                 <>
                   <p>
-                    8 branches in New Moscow — in Kommunarka, Troitsk, Moskovskiy, Vatutinki,
+                    9 branches in Moscow — in Kommunarka, Troitsk, Moskovskiy, Vatutinki,
                     Sosenskoye, Shcherbinka and Pervomayskoye. We are constantly expanding to be closer to you.
                   </p>
                   <p>
