@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react"
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import { branches, courses } from "@/lib/data"
 import type { Locale } from "@/lib/i18n/settings"
 
@@ -19,6 +19,7 @@ export default function EnrollPage({
 }
 
 function EnrollForm({ lang }: { lang: Locale }) {
+  const router = useRouter()
   const searchParams = useSearchParams()
   const preselectedBranch = searchParams.get("branch") || ""
   const preselectedCourse = searchParams.get("course") || ""
@@ -34,7 +35,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
     message: "",
   })
   const [consent, setConsent] = useState(false)
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -48,17 +49,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
       })
 
       if (res.ok) {
-        setStatus("success")
-        setFormData({
-          parentName: "",
-          phone: "",
-          email: "",
-          childName: "",
-          childAge: "",
-          branch: "",
-          course: "",
-          message: "",
-        })
+        router.push(`/${lang}/enroll/success`)
       } else {
         setStatus("error")
       }
@@ -113,7 +104,6 @@ function EnrollForm({ lang }: { lang: Locale }) {
       message: "Комментарий",
       submit: "Отправить заявку",
       sending: "Отправка...",
-      success: "Заявка отправлена! Мы свяжемся с вами в ближайшее время.",
       error: "Произошла ошибка. Попробуйте ещё раз или позвоните нам.",
     },
     en: {
@@ -129,7 +119,6 @@ function EnrollForm({ lang }: { lang: Locale }) {
       message: "Comment",
       submit: "Submit Application",
       sending: "Sending...",
-      success: "Application sent! We will contact you shortly.",
       error: "An error occurred. Please try again or call us.",
     },
   }[lang]
@@ -142,15 +131,7 @@ function EnrollForm({ lang }: { lang: Locale }) {
           <p className="text-gray-600 mt-3">{t.subtitle}</p>
         </div>
 
-        {status === "success" ? (
-          <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-            <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-            </svg>
-            <p className="text-green-800 text-lg font-medium">{t.success}</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">{t.parentName} *</label>
               <input
@@ -295,7 +276,6 @@ function EnrollForm({ lang }: { lang: Locale }) {
               {status === "loading" ? t.sending : t.submit}
             </button>
           </form>
-        )}
       </div>
     </section>
   )
