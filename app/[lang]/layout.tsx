@@ -114,10 +114,8 @@ export default async function LangLayout({
         <noscript>
           <div><img src="https://mc.yandex.ru/watch/107144239" style={{position: 'absolute', left: '-9999px'}} alt="" /></div>
         </noscript>
-        <Script
-          id="ld-org"
+        <script
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
