@@ -94,6 +94,17 @@ export default async function ContactsPage({
               </Link>
             ))}
           </div>
+
+          {/* Legal requisites — required by 149-FZ and 2300-1 */}
+          <h2 className="text-2xl font-bold mt-12 mb-6">{dict.contacts.requisitesTitle}</h2>
+          <dl className="bg-white border rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-[max-content_1fr] gap-x-8 gap-y-3 text-sm">
+            {Object.values(dict.contacts.requisites).map((row) => (
+              <div key={row.label} className="contents">
+                <dt className="text-gray-500">{row.label}</dt>
+                <dd className="font-medium text-gray-900 break-all md:break-normal">{row.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

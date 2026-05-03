@@ -110,6 +110,7 @@ export function Footer({ lang, dict }: FooterProps) {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
           <p>&copy; {currentYear} EwE School. {dict.footer.rights}</p>
+          <p className="mt-2 text-xs text-gray-600">{dict.footer.legal}</p>
           <div className="mt-3 flex justify-center gap-4 text-xs text-gray-600">
             <Link href={`/${lang}/privacy`} className="hover:text-gray-400 transition-colors">
               {lang === "ru" ? "Политика конфиденциальности" : "Privacy Policy"}
