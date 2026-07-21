@@ -106,7 +106,10 @@
     "viewOnMap": "View on Map",
     "details": "Details",
     "phone": "Phone",
-    "address": "Address"
+    "address": "Address",
+    "pricingTitle": "Tuition Fees",
+    "pricingNote": "Group and mini-group prices are per month. Please check availability and schedule with the administrator.",
+    "pricingRules": "Payment and make-up rules"
   },
   "schedule": {
     "title": "Class Schedule",

@@ -146,6 +146,110 @@ export const branches: Branch[] = [
   },
 ]
 
+export interface PriceItem {
+  format: { ru: string; en: string }
+  schedule: { ru: string; en: string }
+  price: { ru: string; en: string }
+}
+
+export interface PriceTier {
+  id: string
+  branchSlugs: string[]
+  items: PriceItem[]
+}
+
+export const priceTiers: PriceTier[] = [
+  {
+    id: 'standard',
+    branchSlugs: [
+      'kommunarka-monakhovoy',
+      'novaya-zvezda',
+      'lipoviy-park',
+      'solntsevo',
+      'home-city',
+      'leninskiy',
+    ],
+    items: [
+      {
+        format: { ru: 'Группа (4–6 человек)', en: 'Group (4–6 students)' },
+        schedule: { ru: '2 раза в неделю · 80 минут', en: 'Twice a week · 80 minutes' },
+        price: { ru: '9 200 ₽ в месяц', en: '9,200 ₽ per month' },
+      },
+      {
+        format: { ru: 'Мини-группа (2–3 человека)', en: 'Mini group (2–3 students)' },
+        schedule: { ru: '2 раза в неделю · 60 минут', en: 'Twice a week · 60 minutes' },
+        price: { ru: '10 900 ₽ в месяц', en: '10,900 ₽ per month' },
+      },
+      {
+        format: { ru: 'Индивидуальные занятия с носителем', en: 'Individual lessons with a native speaker' },
+        schedule: { ru: '45 минут', en: '45 minutes' },
+        price: { ru: 'от 2 000 ₽ за занятие', en: 'from 2,000 ₽ per lesson' },
+      },
+    ],
+  },
+  {
+    id: 'premium',
+    branchSlugs: ['zhk-dubrovka', 'universitet'],
+    items: [
+      {
+        format: { ru: 'Группа (4–6 человек)', en: 'Group (4–6 students)' },
+        schedule: { ru: '2 раза в неделю · 80 минут', en: 'Twice a week · 80 minutes' },
+        price: { ru: '9 900 ₽ в месяц', en: '9,900 ₽ per month' },
+      },
+      {
+        format: { ru: 'Мини-группа (2–3 человека)', en: 'Mini group (2–3 students)' },
+        schedule: { ru: '2 раза в неделю · 60 минут', en: 'Twice a week · 60 minutes' },
+        price: { ru: '13 500 ₽ в месяц', en: '13,500 ₽ per month' },
+      },
+      {
+        format: { ru: 'Индивидуальные занятия с носителем', en: 'Individual lessons with a native speaker' },
+        schedule: { ru: '45 минут', en: '45 minutes' },
+        price: { ru: 'от 3 000 ₽ за занятие', en: 'from 3,000 ₽ per lesson' },
+      },
+    ],
+  },
+  {
+    id: 'vatutinki',
+    branchSlugs: ['novye-vatutinki'],
+    items: [
+      {
+        format: { ru: 'Группа (4–6 человек)', en: 'Group (4–6 students)' },
+        schedule: { ru: '2 раза в неделю · 80 минут', en: 'Twice a week · 80 minutes' },
+        price: { ru: '8 500 ₽ в месяц', en: '8,500 ₽ per month' },
+      },
+      {
+        format: { ru: 'Мини-группа (2–3 человека)', en: 'Mini group (2–3 students)' },
+        schedule: { ru: '2 раза в неделю · 60 минут', en: 'Twice a week · 60 minutes' },
+        price: { ru: '8 500 ₽ в месяц', en: '8,500 ₽ per month' },
+      },
+      {
+        format: { ru: 'Группа (4–6 человек)', en: 'Group (4–6 students)' },
+        schedule: { ru: '2 раза в неделю · 60 минут', en: 'Twice a week · 60 minutes' },
+        price: { ru: '6 500 ₽ в месяц', en: '6,500 ₽ per month' },
+      },
+      {
+        format: { ru: 'Группа (4–6 человек)', en: 'Group (4–6 students)' },
+        schedule: { ru: '2 раза в неделю · 45 минут', en: 'Twice a week · 45 minutes' },
+        price: { ru: '5 200 ₽ в месяц', en: '5,200 ₽ per month' },
+      },
+      {
+        format: { ru: 'Мини-группа (2–3 человека)', en: 'Mini group (2–3 students)' },
+        schedule: { ru: '2 раза в неделю · 45 минут', en: 'Twice a week · 45 minutes' },
+        price: { ru: '6 900 ₽ в месяц', en: '6,900 ₽ per month' },
+      },
+      {
+        format: { ru: 'Индивидуальные занятия с носителем', en: 'Individual lessons with a native speaker' },
+        schedule: { ru: '45 / 60 минут', en: '45 / 60 minutes' },
+        price: { ru: '1 500 ₽ / 2 000 ₽ за занятие', en: '1,500 ₽ / 2,000 ₽ per lesson' },
+      },
+    ],
+  },
+]
+
+export function getPricesForBranch(slug: string): PriceItem[] {
+  return priceTiers.find((tier) => tier.branchSlugs.includes(slug))?.items ?? []
+}
+
 export interface Course {
   id: string
   slug: string

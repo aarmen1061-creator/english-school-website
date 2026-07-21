@@ -2,7 +2,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import type { Locale } from "@/lib/i18n/settings"
-import { branches } from "@/lib/data"
+import { branches, getPricesForBranch } from "@/lib/data"
 
 export function generateStaticParams() {
   return branches.map((branch) => ({ slug: branch.slug }))
@@ -18,6 +18,7 @@ export default async function BranchDetailPage({
 
   const dict = await getDictionary(params.lang)
   const lang = params.lang
+  const prices = getPricesForBranch(branch.slug)
 
   return (
     <section className="py-16">
@@ -64,6 +65,39 @@ export default async function BranchDetailPage({
               </div>
             </div>
           </div>
+
+          {/* Prices */}
+          {prices.length > 0 && (
+            <div className="bg-white border rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold">{dict.branches.pricingTitle}</h3>
+
+                  <ul className="mt-4 divide-y">
+                    {prices.map((item, idx) => (
+                      <li key={idx} className="py-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                        <div>
+                          <p className="font-medium">{item.format[lang]}</p>
+                          <p className="text-sm text-gray-500">{item.schedule[lang]}</p>
+                        </div>
+                        <p className="font-semibold text-primary whitespace-nowrap">{item.price[lang]}</p>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="mt-4 text-sm text-gray-500">{dict.branches.pricingNote}</p>
+                  <Link href={`/${lang}/rules`} className="text-sm text-primary hover:underline mt-2 inline-block">
+                    {dict.branches.pricingRules} →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Map placeholder */}
           <div className="bg-gray-100 rounded-2xl h-64 flex items-center justify-center border-2 border-dashed border-gray-300">
