@@ -16,6 +16,7 @@ const routes: { path: string; priority: number; freq: "weekly" | "monthly" }[] =
   { path: "/schedule", priority: 0.6, freq: "monthly" },
   { path: "/pricing", priority: 0.6, freq: "monthly" },
   { path: "/programs", priority: 0.6, freq: "monthly" },
+  { path: "/rules", priority: 0.5, freq: "monthly" },
   { path: "/privacy", priority: 0.3, freq: "monthly" },
   { path: "/terms", priority: 0.3, freq: "monthly" },
 ]

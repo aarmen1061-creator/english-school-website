@@ -15,7 +15,7 @@ export default function PrivacyPage({
         </h1>
         <div className="prose prose-gray max-w-none text-sm leading-relaxed space-y-6">
           <p className="text-gray-500">
-            {isRu ? "Дата публикации: 11 марта 2026 г." : "Published: March 11, 2026"}
+            {isRu ? "Редакция от 21 июля 2026 г." : "Revised: July 21, 2026"}
           </p>
 
           <h2 className="text-lg font-semibold mt-6">
@@ -23,8 +23,8 @@ export default function PrivacyPage({
           </h2>
           <p>
             {isRu
-              ? "Настоящая Политика конфиденциальности (далее — Политика) определяет порядок обработки и защиты персональных данных пользователей сайта eweschool.ru (далее — Сайт), принадлежащего ИП [ФИО] (далее — Оператор)."
-              : "This Privacy Policy defines the procedure for processing and protecting personal data of users of the website eweschool.ru (hereinafter — the Website), owned by IE [Name] (hereinafter — the Operator)."}
+              ? "Настоящая Политика конфиденциальности (далее — Политика) определяет порядок обработки и защиты персональных данных пользователей сайта eweschool.ru (далее — Сайт), принадлежащего Индивидуальному предпринимателю Восканян Эстер Нориковне (далее — Оператор)."
+              : "This Privacy Policy defines the procedure for processing and protecting personal data of users of the website eweschool.ru (hereinafter — the Website), owned by Individual Entrepreneur Ester Norikovna Voskanyan (hereinafter — the Operator)."}
           </p>
           <p>
             {isRu
@@ -91,10 +91,18 @@ export default function PrivacyPage({
           </h2>
           <p>{isRu ? "Оператор персональных данных:" : "Personal data operator:"}</p>
           <ul className="list-none space-y-1">
-            <li>{isRu ? "ИП [ФИО]" : "IE [Name]"}</li>
-            <li>{isRu ? "ИНН: [ИНН]" : "TIN: [TIN]"}</li>
-            <li>{isRu ? "ОГРНИП: [ОГРНИП]" : "PSRNIE: [PSRNIE]"}</li>
-            <li>{isRu ? "Адрес: [юридический адрес]" : "Address: [legal address]"}</li>
+            <li>
+              {isRu
+                ? "Индивидуальный предприниматель Восканян Эстер Нориковна"
+                : "Individual Entrepreneur Ester Norikovna Voskanyan"}
+            </li>
+            <li>{isRu ? "ИНН: 772412269329" : "TIN: 772412269329"}</li>
+            <li>{isRu ? "ОГРНИП: 325774600572277" : "PSRNIE: 325774600572277"}</li>
+            <li>
+              {isRu
+                ? "Юридический адрес: 115304, г. Москва, ул. Медиков, д. 26, корп. 2, кв. 40"
+                : "Legal address: 115304, Moscow, Medikov St., 26, Bldg. 2, Apt. 40"}
+            </li>
             <li>Email: info@eweschool.ru</li>
             <li>{isRu ? "Телефон" : "Phone"}: +7 (925) 263-00-88</li>
           </ul>

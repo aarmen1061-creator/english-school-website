@@ -75,6 +75,11 @@ export function Footer({ lang, dict }: FooterProps) {
                   {dict.ambassador.navTitle}
                 </Link>
               </li>
+              <li>
+                <Link href={`/${lang}/rules`} className="text-sm hover:text-white transition-colors">
+                  {dict.rules.navTitle}
+                </Link>
+              </li>
             </ul>
           </div>
 

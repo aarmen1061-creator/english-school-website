@@ -266,6 +266,65 @@
     "loading": "Loading...",
     "close": "Close"
   },
+  "rules": {
+    "navTitle": "Payment & Make-up Rules",
+    "metaTitle": "Payment, Make-up Classes and Working Schedule | EwE School",
+    "metaDescription": "Tuition payment procedure, recalculation terms for absences and illness, make-up classes and EwE School working schedule.",
+    "title": "Payment, Make-up Classes and Working Schedule",
+    "subtitle": "Tuition payment terms, recalculation and make-up of missed classes",
+    "updated": "Effective from July 21, 2026",
+    "portal": {
+      "label": "EWE Personal Account",
+      "url": "https://ewe1.t8s.ru"
+    },
+    "sections": [
+      {
+        "id": "payment",
+        "title": "1. Payment Procedure",
+        "items": [
+          "Tuition is paid as a 100% prepayment for the current month by the 5th day of the month inclusive.",
+          "Tuition is paid through the personal account in the EWE system.",
+          "Registration in the system is performed by the administrator after acceptance of the public offer agreement. Login details are sent to the parent by the administrator.",
+          "Timely payment is a condition for keeping the child's place in the group."
+        ]
+      },
+      {
+        "id": "personal-absence",
+        "title": "2. Absence for Personal Reasons",
+        "items": [
+          "If a child is absent for personal reasons — vacation, travel, family circumstances and other reasons not related to illness — tuition is not recalculated.",
+          "The child may make up missed classes in a parallel group, subject to prior agreement with the administration and availability of places.",
+          "Make-up classes are booked through the administrator."
+        ]
+      },
+      {
+        "id": "illness",
+        "title": "3. Long-term Illness",
+        "items": [
+          "If a child is absent due to illness for more than three consecutive weeks, tuition may be recalculated upon presentation of a medical certificate confirming the period of illness."
+        ]
+      },
+      {
+        "id": "working-schedule",
+        "title": "4. Working Schedule",
+        "items": [
+          "The learning centre operates according to the official production calendar for a six-day working week.",
+          "A six-day working week means a schedule in which Monday, Tuesday, Wednesday, Thursday, Friday and Saturday are working days, and Sunday is a day off.",
+          "Official public holidays and non-working days, as well as rescheduled days off, are determined according to the approved production calendar for the relevant year.",
+          "Public holidays and non-working days provided for by the production calendar are not counted as missed classes and are not made up separately."
+        ]
+      },
+      {
+        "id": "individual",
+        "title": "5. Individual Lessons",
+        "items": [
+          "An individual lesson may be rescheduled only by prior agreement with the teacher, no later than one day before the lesson starts.",
+          "Individual lessons on holidays and days off are also arranged with the teacher in advance."
+        ]
+      }
+    ],
+    "questions": "If you still have questions about payment or make-up classes, contact the administrator."
+  },
   "kindergarten": {
     "meta": {
       "title": "MiniDomini — Private Kindergarten in Moscow for Children 1.5 to 7 Years",
