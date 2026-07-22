@@ -4,6 +4,7 @@ import Script from "next/script"
 import "../globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { AttributionTracker } from "@/components/attribution-tracker"
 import { i18n, type Locale } from "@/lib/i18n/settings"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 
@@ -140,6 +141,7 @@ export default async function LangLayout({
             }),
           }}
         />
+        <AttributionTracker />
         <Header lang={params.lang} dict={dict} />
         <main className="min-h-screen">{children}</main>
         <Footer lang={params.lang} dict={dict} />

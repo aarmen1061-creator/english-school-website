@@ -4,6 +4,7 @@ import { Suspense, useState } from "react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { branches, courses } from "@/lib/data"
+import { getAttribution } from "@/lib/attribution"
 import type { Locale } from "@/lib/i18n/settings"
 
 export default function EnrollPage({
@@ -45,7 +46,11 @@ function EnrollForm({ lang }: { lang: Locale }) {
       const res = await fetch("/api/enroll", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          agree: consent,
+          attribution: getAttribution(),
+        }),
       })
 
       if (res.ok) {

@@ -3,10 +3,17 @@
 import { useEffect } from "react"
 import Link from "next/link"
 import type { Locale } from "@/lib/i18n/settings"
+import { METRIKA_ID } from "@/lib/attribution"
 
 declare global {
   interface Window {
-    ym?: (id: number, action: string, target: string) => void
+    // getClientID passes a callback where reachGoal passes a goal name — hence the union
+    ym?: (
+      id: number,
+      action: string,
+      target?: string | ((value: string) => void),
+      params?: Record<string, unknown>,
+    ) => void
     gtag?: (action: string, event: string, params?: Record<string, unknown>) => void
   }
 }
@@ -43,7 +50,7 @@ export default function EnrollSuccessPage({ params }: { params: { lang: Locale }
   useEffect(() => {
     // Yandex.Метрика goal — settable in dashboard as conversion target
     if (typeof window !== "undefined" && window.ym) {
-      window.ym(107144239, "reachGoal", "enroll_submit")
+      window.ym(METRIKA_ID, "reachGoal", "enroll_submit")
     }
     // Google Analytics event
     if (typeof window !== "undefined" && window.gtag) {

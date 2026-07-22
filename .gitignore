@@ -40,3 +40,6 @@ next-env.d.ts
 *-original.jpg
 *-original.jpeg
 *-original.png
+
+# lead journal — personal data, never commit
+/.data/
