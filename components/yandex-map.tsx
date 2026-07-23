@@ -53,9 +53,12 @@ export function YandexMap({ branches, lang }: YandexMapProps) {
         mapRef.current.innerHTML = ""
       }
 
+      // A single branch gets centred on itself — setBounds below only runs for several
+      const single = branches.length === 1 ? branches[0] : null
+
       const map = new window.ymaps.Map(mapRef.current, {
-        center: [55.53, 37.40],
-        zoom: 10,
+        center: single ? single.coordinates : [55.53, 37.40],
+        zoom: single ? 16 : 10,
         controls: ["zoomControl", "fullscreenControl"],
       })
 

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import type { Locale } from "@/lib/i18n/settings"
 import { branches, getPricesForBranch } from "@/lib/data"
+import { YandexMap } from "@/components/yandex-map"
 
 export function generateStaticParams() {
   return branches.map((branch) => ({ slug: branch.slug }))
@@ -99,22 +100,32 @@ export default async function BranchDetailPage({
             </div>
           )}
 
-          {/* Map placeholder */}
-          <div className="bg-gray-100 rounded-2xl h-64 flex items-center justify-center border-2 border-dashed border-gray-300">
-            <div className="text-center text-gray-500">
-              {branch.yandexMapsUrl ? (
-                <a
-                  href={branch.yandexMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium"
-                >
-                  {dict.branches.viewOnMap} →
-                </a>
-              ) : (
-                <p>{lang === "ru" ? "Карта" : "Map"}</p>
-              )}
+          {/* Map */}
+          <div>
+            <div className="rounded-2xl overflow-hidden border">
+              <YandexMap
+                lang={lang}
+                branches={[
+                  {
+                    id: branch.id,
+                    name: branch.name[lang],
+                    address: branch.address[lang],
+                    phone: branch.phone,
+                    coordinates: branch.coordinates,
+                  },
+                ]}
+              />
             </div>
+            {branch.yandexMapsUrl && (
+              <a
+                href={branch.yandexMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-primary hover:underline mt-3 inline-block"
+              >
+                {dict.branches.viewOnMap} →
+              </a>
+            )}
           </div>
 
           {/* CTA */}
