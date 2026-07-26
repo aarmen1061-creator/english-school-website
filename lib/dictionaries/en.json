@@ -26,14 +26,14 @@
   },
   "heroSlides": {
     "summerTitle": "We'll get your child ready for the new school year",
-    "summerSubtitle": "Intensive courses from August 15",
-    "summerPoint1": "📍 At all EWE School branches",
-    "summerPoint2": "📅 Classes every weekday",
+    "summerPoint1": "Intensive courses from August 15",
+    "summerPoint2": "At all EWE School branches",
+    "summerPoint3": "Classes every weekday",
     "summerButton": "Learn More",
     "trialTitle": "First lesson is free",
-    "trialSubtitle": "Get to know the school at a trial lesson",
-    "trialPoint1": "A lesson with a native-speaker teacher",
-    "trialPoint2": "We'll assess your child's level and goals",
+    "trialPoint1": "Get to know the school at a trial lesson",
+    "trialPoint2": "A lesson with a native-speaker teacher",
+    "trialPoint3": "We'll assess your child's level and goals",
     "trialButton": "Sign Up for a Trial Lesson"
   },
   "features": {

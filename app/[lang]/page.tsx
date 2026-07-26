@@ -20,9 +20,9 @@ export default async function HomePage({
       <div className="flex flex-col min-h-[calc(100vh-64px)]">
         <HeroCarousel
           className="flex-1"
+          bg="/images/photos/hero/hero-lesson.jpg"
           slides={[
             {
-              bg: "/images/photos/hero/hero-lesson.jpg",
               title: dict.hero.subtitle,
               bullets: [dict.hero.tagline, dict.hero.freeLesson],
               buttons: [
@@ -31,19 +31,23 @@ export default async function HomePage({
               ],
             },
             {
-              bg: "/images/photos/summer/slide-1.jpg",
               title: dict.heroSlides.summerTitle,
-              subtitle: dict.heroSlides.summerSubtitle,
-              points: [dict.heroSlides.summerPoint1, dict.heroSlides.summerPoint2],
+              bullets: [
+                dict.heroSlides.summerPoint1,
+                dict.heroSlides.summerPoint2,
+                dict.heroSlides.summerPoint3,
+              ],
               buttons: [
                 { label: dict.heroSlides.summerButton, href: `/${lang}/summer`, variant: "primary" },
               ],
             },
             {
-              bg: "/images/photos/gallery/teacher-kids.jpg",
               title: dict.heroSlides.trialTitle,
-              subtitle: dict.heroSlides.trialSubtitle,
-              bullets: [dict.heroSlides.trialPoint1, dict.heroSlides.trialPoint2],
+              bullets: [
+                dict.heroSlides.trialPoint1,
+                dict.heroSlides.trialPoint2,
+                dict.heroSlides.trialPoint3,
+              ],
               buttons: [
                 { label: dict.heroSlides.trialButton, href: `/${lang}/enroll`, variant: "primary" },
               ],

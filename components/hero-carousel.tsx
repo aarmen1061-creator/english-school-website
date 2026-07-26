@@ -11,22 +11,19 @@ interface HeroButton {
 }
 
 interface HeroSlide {
-  bg: string
   title: string
-  subtitle?: string
-  // Bullets rendered with a dot marker; points already carry their own emoji marker
-  bullets?: string[]
-  points?: string[]
+  bullets: string[]
   buttons: HeroButton[]
 }
 
 interface HeroCarouselProps {
+  bg: string
   slides: HeroSlide[]
   className?: string
   interval?: number
 }
 
-export function HeroCarousel({ slides, className = "", interval = 6000 }: HeroCarouselProps) {
+export function HeroCarousel({ bg, slides, className = "", interval = 6000 }: HeroCarouselProps) {
   const [current, setCurrent] = useState(0)
 
   const goTo = useCallback((index: number) => {
@@ -40,55 +37,37 @@ export function HeroCarousel({ slides, className = "", interval = 6000 }: HeroCa
 
   return (
     <section className={`relative overflow-hidden ${className}`}>
-      {/* Backgrounds */}
-      {slides.map((slide, i) => (
-        <div
-          key={slide.bg}
-          className={`absolute inset-0 transition-opacity duration-700 ${
-            i === current ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <Image
-            src={slide.bg}
-            alt=""
-            fill
-            className="object-cover object-[center_30%]"
-            priority
-            sizes="100vw"
-          />
-          {/* Dense under the text on the left, clear on the right so the photo swap is visible */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/75 to-white/40" />
-        </div>
-      ))}
+      {/* Single fixed background — only the text changes between slides */}
+      <div className="absolute inset-0">
+        <Image
+          src={bg}
+          alt=""
+          fill
+          className="object-cover object-[center_30%]"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-white/70" />
+      </div>
 
-      {/* Slides content */}
-      <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 flex items-center min-h-[420px] md:min-h-[460px]">
+      {/* Slides content — stacked in one grid cell so the crossfade never shifts layout */}
+      <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 grid items-center min-h-[420px] md:min-h-[460px]">
         {slides.map((slide, i) => (
           <div
             key={slide.title}
-            className={`max-w-2xl transition-opacity duration-700 ${
-              i === current ? "opacity-100" : "opacity-0 pointer-events-none absolute"
+            className={`col-start-1 row-start-1 max-w-2xl transition-opacity duration-500 ${
+              i === current ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
             aria-hidden={i !== current}
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1a2744] font-bold leading-tight">
               {slide.title}
             </h1>
-            {slide.subtitle && (
-              <p className="mt-4 text-lg md:text-xl text-[#1a2744] font-semibold">
-                {slide.subtitle}
-              </p>
-            )}
             <div className="mt-5 space-y-2">
-              {slide.bullets?.map((b) => (
+              {slide.bullets.map((b) => (
                 <p key={b} className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
                   <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
                   {b}
-                </p>
-              ))}
-              {slide.points?.map((p) => (
-                <p key={p} className="text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
-                  {p}
                 </p>
               ))}
             </div>
@@ -137,7 +116,7 @@ export function HeroCarousel({ slides, className = "", interval = 6000 }: HeroCa
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {slides.map((slide, i) => (
           <button
-            key={slide.bg}
+            key={slide.title}
             type="button"
             onClick={() => goTo(i)}
             aria-label={`Слайд ${i + 1}`}
