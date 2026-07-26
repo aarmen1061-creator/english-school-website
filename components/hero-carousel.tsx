@@ -56,7 +56,8 @@ export function HeroCarousel({ slides, className = "", interval = 6000 }: HeroCa
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-white/70" />
+          {/* Dense under the text on the left, clear on the right so the photo swap is visible */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/75 to-white/40" />
         </div>
       ))}
 
