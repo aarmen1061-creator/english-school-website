@@ -24,6 +24,10 @@ export default async function SummerPage({
       src: "/images/photos/summer/slide-3.jpg",
       alt: lang === "ru" ? "Обучающая игра в EWE School" : "Learning game at EWE School",
     },
+    {
+      src: "/images/photos/summer/slide-4.jpg",
+      alt: lang === "ru" ? "Занятие в игровой форме в EWE School" : "Playful class at EWE School",
+    },
   ]
 
   const benefits =
