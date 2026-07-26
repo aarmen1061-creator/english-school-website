@@ -4,6 +4,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries"
 import type { Locale } from "@/lib/i18n/settings"
 import { courses, reviews } from "@/lib/data"
 import { PromoSlider } from "@/components/promo-slider"
+import { HeroCarousel } from "@/components/hero-carousel"
 
 export default async function HomePage({
   params,
@@ -17,51 +18,38 @@ export default async function HomePage({
     <>
       {/* Hero + Promo — fill first screen */}
       <div className="flex flex-col min-h-[calc(100vh-64px)]">
-        <section className="relative overflow-hidden flex-1">
-          {/* Background photo */}
-          <div className="absolute inset-0">
-            <Image
-              src="/images/photos/hero/hero-lesson.jpg"
-              alt=""
-              fill
-              className="object-cover object-[center_30%]"
-              priority
-            />
-            <div className="absolute inset-0 bg-white/70" />
-          </div>
-          {/* Text content */}
-          <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 flex items-center h-full">
-            <div className="max-w-2xl">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1a2744] font-bold leading-tight">
-                {dict.hero.subtitle}
-              </h1>
-              <div className="mt-5 space-y-2">
-                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
-                  <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
-                  {dict.hero.tagline}
-                </p>
-                <p className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">
-                  <span className="w-3 h-3 rounded-full bg-[#1a2744] flex-shrink-0" />
-                  {dict.hero.freeLesson}
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 mt-10">
-                <Link
-                  href={`/${lang}/enroll`}
-                  className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all uppercase tracking-wide"
-                >
-                  {dict.hero.ctaEnroll}
-                </Link>
-                <Link
-                  href={`/${lang}/branches`}
-                  className="inline-block bg-white/80 hover:bg-white text-gray-800 px-8 py-3 rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all border border-gray-200"
-                >
-                  {dict.hero.ctaBranches}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <HeroCarousel
+          className="flex-1"
+          slides={[
+            {
+              bg: "/images/photos/hero/hero-lesson.jpg",
+              title: dict.hero.subtitle,
+              bullets: [dict.hero.tagline, dict.hero.freeLesson],
+              buttons: [
+                { label: dict.hero.ctaEnroll, href: `/${lang}/enroll`, variant: "primary" },
+                { label: dict.hero.ctaBranches, href: `/${lang}/branches`, variant: "secondary" },
+              ],
+            },
+            {
+              bg: "/images/photos/summer/slide-1.jpg",
+              title: dict.heroSlides.summerTitle,
+              subtitle: dict.heroSlides.summerSubtitle,
+              points: [dict.heroSlides.summerPoint1, dict.heroSlides.summerPoint2],
+              buttons: [
+                { label: dict.heroSlides.summerButton, href: `/${lang}/summer`, variant: "primary" },
+              ],
+            },
+            {
+              bg: "/images/photos/gallery/teacher-kids.jpg",
+              title: dict.heroSlides.trialTitle,
+              subtitle: dict.heroSlides.trialSubtitle,
+              bullets: [dict.heroSlides.trialPoint1, dict.heroSlides.trialPoint2],
+              buttons: [
+                { label: dict.heroSlides.trialButton, href: `/${lang}/enroll`, variant: "primary" },
+              ],
+            },
+          ]}
+        />
 
         {/* Promo Slider — bottom of first screen */}
         <PromoSlider
