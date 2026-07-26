@@ -1,7 +1,7 @@
 import Link from "next/link"
-import Image from "next/image"
 import { getDictionary } from "@/lib/i18n/dictionaries"
 import type { Locale } from "@/lib/i18n/settings"
+import { SummerCarousel } from "@/components/summer-carousel"
 
 export default async function SummerPage({
   params,
@@ -10,6 +10,21 @@ export default async function SummerPage({
 }) {
   const dict = await getDictionary(params.lang)
   const lang = params.lang
+
+  const slides = [
+    {
+      src: "/images/photos/summer/slide-1.jpg",
+      alt: lang === "ru" ? "Дети на занятии с поднятыми руками" : "Kids raising hands in class",
+    },
+    {
+      src: "/images/photos/summer/slide-2.jpg",
+      alt: lang === "ru" ? "Групповое занятие за круглым столом" : "Group lesson at a round table",
+    },
+    {
+      src: "/images/photos/summer/slide-3.jpg",
+      alt: lang === "ru" ? "Обучающая игра в EWE School" : "Learning game at EWE School",
+    },
+  ]
 
   const benefits =
     lang === "ru"
@@ -44,20 +59,7 @@ export default async function SummerPage({
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center max-w-5xl mx-auto">
-            <div className="relative aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/photos/summer/prep.jpg"
-                alt={
-                  lang === "ru"
-                    ? "Занятие по подготовке к учебному году в EWE School"
-                    : "Back-to-school preparation class at EWE School"
-                }
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                priority
-              />
-            </div>
+            <SummerCarousel slides={slides} />
 
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
