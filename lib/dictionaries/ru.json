@@ -26,15 +26,10 @@
   },
   "heroSlides": {
     "summerTitle": "Подготовим ребёнка к новому учебному году",
-    "summerPoint1": "Интенсивы с 15 августа",
-    "summerPoint2": "Во всех филиалах EWE School",
-    "summerPoint3": "Занятия ежедневно по будням",
-    "summerButton": "Подробнее",
-    "trialTitle": "Первое занятие — бесплатно",
-    "trialPoint1": "Познакомьтесь со школой на пробном уроке",
-    "trialPoint2": "Урок с преподавателем — носителем языка",
-    "trialPoint3": "Определим уровень и цели ребёнка",
-    "trialButton": "Записаться на пробный урок"
+    "summerSubtitle": "Интенсивы с 15 августа",
+    "summerPoint1": "Во всех филиалах EWE School",
+    "summerPoint2": "Занятия ежедневно по будням",
+    "summerButton": "Подробнее"
   },
   "features": {
     "teachers": {

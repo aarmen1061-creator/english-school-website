@@ -12,6 +12,7 @@ interface HeroButton {
 
 interface HeroSlide {
   title: string
+  subtitle?: string
   bullets: string[]
   buttons: HeroButton[]
 }
@@ -63,6 +64,11 @@ export function HeroCarousel({ bg, slides, className = "", interval = 6000 }: He
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#1a2744] font-bold leading-tight">
               {slide.title}
             </h1>
+            {slide.subtitle && (
+              <p className="mt-4 text-xl md:text-2xl text-[#1a2744] font-bold">
+                {slide.subtitle}
+              </p>
+            )}
             <div className="mt-5 space-y-2">
               {slide.bullets.map((b) => (
                 <p key={b} className="flex items-center gap-3 text-base md:text-lg text-[#1a2744] leading-relaxed font-bold">

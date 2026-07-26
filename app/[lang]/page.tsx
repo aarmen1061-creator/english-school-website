@@ -32,24 +32,13 @@ export default async function HomePage({
             },
             {
               title: dict.heroSlides.summerTitle,
+              subtitle: dict.heroSlides.summerSubtitle,
               bullets: [
                 dict.heroSlides.summerPoint1,
                 dict.heroSlides.summerPoint2,
-                dict.heroSlides.summerPoint3,
               ],
               buttons: [
                 { label: dict.heroSlides.summerButton, href: `/${lang}/summer`, variant: "primary" },
-              ],
-            },
-            {
-              title: dict.heroSlides.trialTitle,
-              bullets: [
-                dict.heroSlides.trialPoint1,
-                dict.heroSlides.trialPoint2,
-                dict.heroSlides.trialPoint3,
-              ],
-              buttons: [
-                { label: dict.heroSlides.trialButton, href: `/${lang}/enroll`, variant: "primary" },
               ],
             },
           ]}
