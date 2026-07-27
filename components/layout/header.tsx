@@ -21,7 +21,7 @@ export function Header({ lang, dict }: HeaderProps) {
 
   const navigation = [
     { name: dict.nav.about, href: `/${lang}/about` },
-    { name: dict.nav.branches, href: `/${lang}/branches` },
+    { name: dict.nav.branchesPrices, href: `/${lang}/branches` },
     { name: dict.nav.courses, href: `/${lang}/courses` },
     { name: dict.nav.summer, href: `/${lang}/summer`, highlight: true },
     { name: dict.nav.promos, href: `/${lang}/promo` },
