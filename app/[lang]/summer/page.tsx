@@ -53,8 +53,8 @@ export default async function SummerPage({
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
             {lang === "ru"
-              ? "С 15 августа во всех филиалах EWE School"
-              : "From August 15 at all EWE School branches"}
+              ? "С 17 августа во всех филиалах EWE School"
+              : "From August 17 at all EWE School branches"}
           </p>
         </div>
       </section>

@@ -43,12 +43,12 @@ export const branches: Branch[] = [
     id: '3',
     slug: 'novaya-zvezda',
     name: {
-      ru: 'Новая Звезда, Бачуринская ул., д. 7/1',
-      en: 'Novaya Zvezda, Bachurinskaya St., 7/1',
+      ru: 'Новая Звезда, Бачуринская ул., д. 9А',
+      en: 'Novaya Zvezda, Bachurinskaya St., 9A',
     },
     address: {
-      ru: 'Москва, Новая Звезда, Бачуринская ул., д. 7/1',
-      en: 'Moscow, Novaya Zvezda, Bachurinskaya St., 7/1',
+      ru: 'Москва, Новая Звезда, Бачуринская ул., д. 9А',
+      en: 'Moscow, Novaya Zvezda, Bachurinskaya St., 9A',
     },
     phone: '+7 (925) 263-00-88',
     coordinates: [55.5772, 37.4805],
