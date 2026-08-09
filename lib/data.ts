@@ -51,7 +51,7 @@ export const branches: Branch[] = [
       en: 'Moscow, Novaya Zvezda, Bachurinskaya St., 9A, Bldg. 2',
     },
     phone: '+7 (925) 263-00-88',
-    coordinates: [55.5772, 37.4805],
+    coordinates: [55.5786, 37.4817],
     yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/137342625080/',
   },
   {
