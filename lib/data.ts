@@ -28,15 +28,15 @@ export const branches: Branch[] = [
     id: '2',
     slug: 'lipoviy-park',
     name: {
-      ru: 'Липовый Парк, ул. Липовый Парк, д. 5',
-      en: 'Lipovy Park, Lipovy Park St., 5',
+      ru: 'Липовый Парк, ул. Липовый Парк, д. 4, корп. 3',
+      en: 'Lipovy Park, Lipovy Park St., 4, Bldg. 3',
     },
     address: {
-      ru: 'Москва, Липовый Парк, ул. Липовый Парк, д. 5',
-      en: 'Moscow, Lipovy Park, Lipovy Park St., 5',
+      ru: 'Москва, Липовый Парк, ул. Липовый Парк, д. 4, корп. 3',
+      en: 'Moscow, Lipovy Park, Lipovy Park St., 4, Bldg. 3',
     },
     phone: '+7 (925) 263-00-88',
-    coordinates: [55.5615, 37.4690],
+    coordinates: [55.5712, 37.4905],
     yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/128686209977/',
   },
   {
@@ -55,34 +55,19 @@ export const branches: Branch[] = [
     yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/137342625080/',
   },
   {
-    id: '4',
-    slug: 'zhk-dubrovka',
-    name: {
-      ru: 'ЖК Дубровка, Сосновая ул., 1Б',
-      en: 'ZhK Dubrovka, Sosnovaya St., 1B',
-    },
-    address: {
-      ru: 'Москва, ЖК Дубровка, Сосновая ул., 1Б',
-      en: 'Moscow, ZhK Dubrovka, Sosnovaya St., 1B',
-    },
-    phone: '+7 (925) 263-00-88',
-    coordinates: [55.5680, 37.4465],
-    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/39623816484/',
-  },
-  {
     id: '5',
-    slug: 'solntsevo',
+    slug: 'rasskazovka',
     name: {
-      ru: 'Солнцево, ул. Лётчика Грицевца, 10',
-      en: 'Solntsevo, Lyotchika Gritsevtsa St., 10',
+      ru: 'Рассказовка, ул. Андрея Тарковского, 10',
+      en: 'Rasskazovka, Andreya Tarkovskogo St., 10',
     },
     address: {
-      ru: 'Москва, Солнцево, ул. Лётчика Грицевца, 10',
-      en: 'Moscow, Solntsevo, Lyotchika Gritsevtsa St., 10',
+      ru: 'Москва, Рассказовка, ул. Андрея Тарковского, 10',
+      en: 'Moscow, Rasskazovka, Andreya Tarkovskogo St., 10',
     },
     phone: '+7 (925) 263-00-88',
-    coordinates: [55.6235, 37.3112],
-    yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/54080616315/',
+    coordinates: [55.6248, 37.3388],
+    yandexMapsUrl: 'https://yandex.ru/maps/?pt=37.3388,55.6248&z=17&l=map',
   },
   {
     id: '6',
@@ -144,6 +129,21 @@ export const branches: Branch[] = [
     coordinates: [55.5207, 37.3478],
     yandexMapsUrl: 'https://yandex.ru/maps/org/ewe_school/59304002722/',
   },
+  {
+    id: '10',
+    slug: 'eko-bunino',
+    name: {
+      ru: 'Эко Бунино, ул. Куприна, 40, корп. 1',
+      en: 'Eko Bunino, Kuprina St., 40, Bldg. 1',
+    },
+    address: {
+      ru: 'Москва, Эко Бунино, ул. Куприна, 40, корп. 1',
+      en: 'Moscow, Eko Bunino, Kuprina St., 40, Bldg. 1',
+    },
+    phone: '+7 (925) 263-00-88',
+    coordinates: [55.5402, 37.4538],
+    yandexMapsUrl: 'https://yandex.ru/maps/?pt=37.4538,55.5402&z=17&l=map',
+  },
 ]
 
 export interface PriceItem {
@@ -165,7 +165,7 @@ export const priceTiers: PriceTier[] = [
       'kommunarka-monakhovoy',
       'novaya-zvezda',
       'lipoviy-park',
-      'solntsevo',
+      'rasskazovka',
       'home-city',
       'leninskiy',
     ],
@@ -189,7 +189,7 @@ export const priceTiers: PriceTier[] = [
   },
   {
     id: 'premium',
-    branchSlugs: ['zhk-dubrovka', 'universitet'],
+    branchSlugs: ['universitet'],
     items: [
       {
         format: { ru: 'Группа (4–6 человек)', en: 'Group (4–6 students)' },
@@ -210,7 +210,7 @@ export const priceTiers: PriceTier[] = [
   },
   {
     id: 'vatutinki',
-    branchSlugs: ['novye-vatutinki'],
+    branchSlugs: ['novye-vatutinki', 'eko-bunino'],
     items: [
       {
         format: { ru: 'Группа (4–6 человек)', en: 'Group (4–6 students)' },
@@ -436,7 +436,7 @@ export const reviews: Review[] = [
   {
     id: '6',
     author: { ru: 'Наталья Юрчак', en: 'Natalya Yurchak' },
-    branch: 'solntsevo',
+    branch: 'rasskazovka',
     rating: 5,
     text: {
       ru: 'Давно хотела написать о школе EwE School, наконец то руки дошли! Посещаем школу в районе Солнцево-Парк. Сыну она понравилась больше всего — свободная дружественная атмосфера, ребёнок не привязан к парте. Конечно преподаватель — очень приятная, располагающая к себе детей (носитель английского). Сын ходит с удовольствием, начал болтать на английском, постоянно поёт английские песенки! P.S. На Новый Год для детей был организован прекрасный праздник — ребёнок в восторге!',
